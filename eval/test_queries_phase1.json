@@ -1,0 +1,218 @@
+[
+  {
+    "query": "Яка виручка за Q3 2024?",
+    "type": "SCALAR_LOOKUP",
+    "expected": 1272000.0,
+    "correct_tables": [
+      "income"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Який чистий прибуток за Q1 2023?",
+    "type": "SCALAR_LOOKUP",
+    "expected": 166500.0,
+    "correct_tables": [
+      "income"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Яка сукупна виручка за 2023 рік?",
+    "type": "AGGREGATE_SUM",
+    "expected": 4271000.0,
+    "correct_tables": [
+      "income"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Який середній чистий прибуток за 2023 рік?",
+    "type": "AGGREGATE_MEAN",
+    "expected": 176575.0,
+    "correct_tables": [
+      "income"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Який максимальний валовий прибуток серед усіх кварталів?",
+    "type": "FIND_MAX_MIN",
+    "expected": 515000.0,
+    "correct_tables": [
+      "income"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Яка різниця між чистим прибутком Q1 2024 і Q1 2023?",
+    "type": "COMPARE_TWO",
+    "expected": 24100.0,
+    "correct_tables": [
+      "income"
+    ],
+    "note": ""
+  },
+  {
+    "query": "На скільки відсотків зросла виручка з Q1 2023 по Q1 2024?",
+    "type": "GROWTH_RATE",
+    "expected": 15.35,
+    "correct_tables": [
+      "income"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Яка маржа чистого прибутку (%) за Q4 2024?",
+    "type": "RATIO",
+    "expected": 16.45,
+    "correct_tables": [
+      "income"
+    ],
+    "note": "навмисно провокує L2: перша спроба у MOCK-режимі інвертує формулу"
+  },
+  {
+    "query": "Який власний капітал на Q2 2024?",
+    "type": "SCALAR_LOOKUP",
+    "expected": 2148000.0,
+    "correct_tables": [
+      "balance"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Скільки всього активів на Q4 2023?",
+    "type": "SCALAR_LOOKUP",
+    "expected": 3286000.0,
+    "correct_tables": [
+      "balance"
+    ],
+    "note": ""
+  },
+  {
+    "query": "На скільки зросли всього активів з Q1 2023 по Q4 2024?",
+    "type": "COMPARE_TWO",
+    "expected": 1073000.0,
+    "correct_tables": [
+      "balance"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Яка частка власного капіталу у всього активів (%) на Q3 2024?",
+    "type": "RATIO",
+    "expected": 59.99,
+    "correct_tables": [
+      "balance"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Яка максимальна дебіторська заборгованість серед усіх кварталів?",
+    "type": "FIND_MAX_MIN",
+    "expected": 271000.0,
+    "correct_tables": [
+      "balance"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Яка середня величина всього зобов'язань за 2024 рік?",
+    "type": "AGGREGATE_MEAN",
+    "expected": 1466250.0,
+    "correct_tables": [
+      "balance"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Скільки виплачено дивідендів акціонерам за Q2 2023?",
+    "type": "SCALAR_LOOKUP",
+    "expected": -42400.0,
+    "correct_tables": [
+      "cashflow"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Який чистий рух коштів від операційної діяльності за Q4 2024?",
+    "type": "SCALAR_LOOKUP",
+    "expected": 288100.0,
+    "correct_tables": [
+      "cashflow"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Яка сума витрат на маркетинг за 2024 рік?",
+    "type": "AGGREGATE_SUM",
+    "expected": -112100.0,
+    "correct_tables": [
+      "cashflow"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Скільки всього сплачено відсотків за кредитами за 2023 рік?",
+    "type": "AGGREGATE_SUM",
+    "expected": -78800.0,
+    "correct_tables": [
+      "cashflow"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Які найбільші надходження від реалізації продукції серед усіх кварталів?",
+    "type": "FIND_MAX_MIN",
+    "expected": 1288200.0,
+    "correct_tables": [
+      "cashflow"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Скільки кварталів мали чистий рух грошових коштів за період більше 80000?",
+    "type": "CONDITIONAL_FILTER",
+    "expected": 4.0,
+    "correct_tables": [
+      "cashflow"
+    ],
+    "note": "показник лежить у РЯДКУ 27 — доступний лише якщо М1 зшив таблицю"
+  },
+  {
+    "query": "Який середній чистий рух коштів від інвестиційної діяльності за 2023 рік?",
+    "type": "AGGREGATE_MEAN",
+    "expected": -131350.0,
+    "correct_tables": [
+      "cashflow"
+    ],
+    "note": ""
+  },
+  {
+    "query": "На скільки відсотків зросли надходження від реалізації продукції з Q1 2023 по Q4 2024?",
+    "type": "GROWTH_RATE",
+    "expected": 35.2,
+    "correct_tables": [
+      "cashflow"
+    ],
+    "note": ""
+  },
+  {
+    "query": "Які грошові кошти на кінець Q2 2024?",
+    "type": "SCALAR_LOOKUP",
+    "expected": 1048000.0,
+    "correct_tables": [
+      "income",
+      "balance",
+      "cashflow"
+    ],
+    "note": "те саме число присутнє в усіх трьох таблицях — саме тому correct_tables це СПИСОК; перевіряє і v_cross_table"
+  },
+  {
+    "query": "Яка рентабельність по сегменту B2B за МСФЗ 15 у Q2 2023?",
+    "type": "ADVERSARIAL",
+    "expected": null,
+    "correct_tables": [],
+    "note": "таких даних немає в жодній таблиці — перевірка чесного ABSTAIN; у recall@1 не враховується (немає правильної відповіді)"
+  }
+]

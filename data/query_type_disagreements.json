@@ -1,0 +1,120 @@
+[
+ {
+  "query": "Скільки становлять усі короткострокові зобов'язання за 2023 рік?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "7e6024a217",
+  "metric": "короткострокові зобов'язання",
+  "source": "llm_paraphrase",
+  "seed_query": "Які сукупні короткострокові зобов'язання за 2023 рік?",
+  "arbiter": "SCALAR_LOOKUP"
+ },
+ {
+  "query": "Скільки сплачено податку на прибуток у 2023 році?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "54b0c20078",
+  "metric": "податок на прибуток",
+  "source": "llm_paraphrase",
+  "seed_query": "Порахуй загальну суму податку на прибуток за 2023 рік",
+  "arbiter": "SCALAR_LOOKUP"
+ },
+ {
+  "query": "Яка прибутковість, виміряна нерозподіленим прибутком, за другий квартал 2023 року?",
+  "type": "RATIO",
+  "seed_id": "bc481e723b",
+  "metric": "нерозподілений прибуток",
+  "source": "llm_paraphrase",
+  "seed_query": "Яка рентабельність за показником нерозподіленого прибутку у Q2 2023?",
+  "arbiter": "SCALAR_LOOKUP"
+ },
+ {
+  "query": "Як співвіднести активи у четвертому кварталі 2023 і першому кварталі 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "645a207752",
+  "metric": "активи",
+  "source": "llm_paraphrase",
+  "seed_query": "Порівняй активи у Q4 2023 і Q1 2024",
+  "arbiter": "RATIO"
+ },
+ {
+  "query": "Скільки становить собівартість реалізації у 2024 році?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "a579650bc3",
+  "metric": "собівартість реалізації",
+  "source": "llm_paraphrase",
+  "seed_query": "Яка сумарна собівартість реалізації за 2024 рік?",
+  "arbiter": "SCALAR_LOOKUP"
+ },
+ {
+  "query": "Скільки становить дебіторська заборгованість у 2023 році?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "10e593c139",
+  "metric": "дебіторська заборгованість",
+  "source": "llm_paraphrase",
+  "seed_query": "Скільки всього дебіторської заборгованості за 2023 рік?",
+  "arbiter": "SCALAR_LOOKUP"
+ },
+ {
+  "query": "Скільки становлять короткострокові зобов'язання у 2024 році?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "89fcb851f7",
+  "metric": "короткострокові зобов'язання",
+  "source": "llm_paraphrase",
+  "seed_query": "Скільки всього короткострокових зобов'язань за 2024 рік?",
+  "arbiter": "SCALAR_LOOKUP"
+ },
+ {
+  "query": "На скільки в грошових одиницях змінився операційний грошовий потік між Q1 2023 і Q1 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "f889044189",
+  "metric": "операційний грошовий потік",
+  "source": "llm_paraphrase",
+  "seed_query": "Наскільки змінилося значення операційного грошового потоку з Q1 2023 до Q1 2024 в абсолютних цифрах?",
+  "arbiter": "GROWTH_RATE"
+ },
+ {
+  "query": "Скільки витрачено на маркетинг у 2024 році?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "37807b7a86",
+  "metric": "витрати на маркетинг",
+  "source": "llm_paraphrase",
+  "seed_query": "Які сукупні витрати на маркетинг за 2024 рік?",
+  "arbiter": "SCALAR_LOOKUP"
+ },
+ {
+  "query": "Як змінювався нерозподілений прибуток від Q1 2024 до Q2 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "49520aca0d",
+  "metric": "нерозподілений прибуток",
+  "source": "llm_paraphrase",
+  "seed_query": "Порівняй нерозподілений прибуток у Q1 2024 і Q2 2024",
+  "arbiter": "GROWTH_RATE"
+ },
+ {
+  "query": "Скільки в сумі операційного грошового потоку за 2024 рік?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "986671a127",
+  "metric": "операційний грошовий потік",
+  "source": "llm_paraphrase",
+  "seed_query": "Який сукупний операційний грошовий потік за 2024 рік?",
+  "arbiter": "SCALAR_LOOKUP"
+ },
+ {
+  "query": "Скільки всього грошових коштів у 2024 році?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "4a0244daa7",
+  "metric": "грошові кошти",
+  "source": "llm_paraphrase",
+  "seed_query": "Скільки всього грошових коштів за 2024 рік?",
+  "arbiter": "SCALAR_LOOKUP"
+ },
+ {
+  "query": "Покажи найвищий рівень грошових коштів у кожному кварталі.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "bf72383388",
+  "metric": "грошові кошти",
+  "source": "llm_paraphrase",
+  "seed_query": "Які максимальні грошові кошти серед усіх кварталів?",
+  "arbiter": "FAILED",
+  "error": null
+ }
+]
