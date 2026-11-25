@@ -1,0 +1,170 @@
+[
+  {
+    "type": "SCALAR_LOOKUP",
+    "query": "What was revenue in Q3 2024?",
+    "expected": 1272000.0,
+    "correct_tables": ["income"],
+    "note": "single cell"
+  },
+  {
+    "type": "SCALAR_LOOKUP",
+    "query": "What was net profit in Q1 2023?",
+    "expected": 166500.0,
+    "correct_tables": ["income"],
+    "note": "single cell"
+  },
+  {
+    "type": "AGGREGATE_SUM",
+    "query": "What was total revenue for 2023?",
+    "expected": 4271000.0,
+    "correct_tables": ["income"],
+    "note": "four quarters summed"
+  },
+  {
+    "type": "AGGREGATE_MEAN",
+    "query": "What was the average net profit for 2023?",
+    "expected": 176575.0,
+    "correct_tables": ["income"],
+    "note": "mean over four quarters"
+  },
+  {
+    "type": "FIND_MAX_MIN",
+    "query": "What was the maximum gross profit across all quarters?",
+    "expected": 515000.0,
+    "correct_tables": ["income"],
+    "note": "max over the whole row"
+  },
+  {
+    "type": "COMPARE_TWO",
+    "query": "What is the difference between net profit in Q1 2024 and Q1 2023?",
+    "expected": 24100.0,
+    "correct_tables": ["income"],
+    "note": "absolute difference"
+  },
+  {
+    "type": "GROWTH_RATE",
+    "query": "By what percent did revenue grow from Q1 2023 to Q1 2024?",
+    "expected": 15.35,
+    "correct_tables": ["income"],
+    "note": "relative"
+  },
+  {
+    "type": "RATIO",
+    "query": "What was the net profit margin (%) in Q4 2024?",
+    "expected": 16.45,
+    "correct_tables": ["income"],
+    "note": "deliberate first-attempt failure, L2 repair"
+  },
+  {
+    "type": "SCALAR_LOOKUP",
+    "query": "What was total equity at Q2 2024?",
+    "expected": 2148000.0,
+    "correct_tables": ["balance"],
+    "note": "single cell"
+  },
+  {
+    "type": "SCALAR_LOOKUP",
+    "query": "What were total assets at Q4 2023?",
+    "expected": 3286000.0,
+    "correct_tables": ["balance"],
+    "note": "single cell"
+  },
+  {
+    "type": "COMPARE_TWO",
+    "query": "By how much did total assets grow from Q1 2023 to Q4 2024?",
+    "expected": 1073000.0,
+    "correct_tables": ["balance"],
+    "note": "absolute difference despite the word grow"
+  },
+  {
+    "type": "RATIO",
+    "query": "What was the share of total equity in total assets (%) at Q3 2024?",
+    "expected": 59.99,
+    "correct_tables": ["balance"],
+    "note": "relative"
+  },
+  {
+    "type": "FIND_MAX_MIN",
+    "query": "What were the maximum trade receivables across all quarters?",
+    "expected": 271000.0,
+    "correct_tables": ["balance"],
+    "note": "max over the whole row"
+  },
+  {
+    "type": "AGGREGATE_MEAN",
+    "query": "What were the average total liabilities for 2024?",
+    "expected": 1466250.0,
+    "correct_tables": ["balance"],
+    "note": "mean over four quarters"
+  },
+  {
+    "type": "SCALAR_LOOKUP",
+    "query": "How much was paid in dividends to shareholders in Q2 2023?",
+    "expected": -42400.0,
+    "correct_tables": ["cashflow"],
+    "note": "negative value"
+  },
+  {
+    "type": "SCALAR_LOOKUP",
+    "query": "What was the net cash from operating activities in Q4 2024?",
+    "expected": 288100.0,
+    "correct_tables": ["cashflow"],
+    "note": "a subtotal row, constrained by an arithmetic invariant"
+  },
+  {
+    "type": "AGGREGATE_SUM",
+    "query": "What was the total of marketing expenses for 2024?",
+    "expected": -112100.0,
+    "correct_tables": ["cashflow"],
+    "note": "deliberate first-attempt failure: misspelt row label, L0 repair"
+  },
+  {
+    "type": "AGGREGATE_SUM",
+    "query": "How much interest was paid on loans in total for 2023?",
+    "expected": -78800.0,
+    "correct_tables": ["cashflow"],
+    "note": "the Ukrainian twin of this query is ambiguous; English is not"
+  },
+  {
+    "type": "FIND_MAX_MIN",
+    "query": "What were the largest proceeds from sales of goods across all quarters?",
+    "expected": 1288200.0,
+    "correct_tables": ["cashflow"],
+    "note": "max over the whole row"
+  },
+  {
+    "type": "CONDITIONAL_FILTER",
+    "query": "How many quarters had net change in cash for the period above 80000?",
+    "expected": 4.0,
+    "correct_tables": ["cashflow"],
+    "note": "count over a threshold on a subtotal row"
+  },
+  {
+    "type": "AGGREGATE_MEAN",
+    "query": "What was the average net cash from investing activities for 2023?",
+    "expected": -131350.0,
+    "correct_tables": ["cashflow"],
+    "note": "mean over four quarters of a subtotal row"
+  },
+  {
+    "type": "GROWTH_RATE",
+    "query": "By what percent did proceeds from sales of goods grow from Q1 2023 to Q4 2024?",
+    "expected": 35.2,
+    "correct_tables": ["cashflow"],
+    "note": "relative"
+  },
+  {
+    "type": "SCALAR_LOOKUP",
+    "query": "What was cash at end of quarter in Q2 2024?",
+    "expected": 1048000.0,
+    "correct_tables": ["income", "balance", "cashflow"],
+    "note": "reachable from three tables under different labels"
+  },
+  {
+    "type": "ADVERSARIAL",
+    "query": "What was the profitability of the B2B segment under IFRS 15 in Q2 2023?",
+    "expected": null,
+    "correct_tables": [],
+    "note": "the document holds no such data; the correct outcome is ABSTAIN"
+  }
+]

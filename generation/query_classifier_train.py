@@ -15,16 +15,25 @@ import os
 
 import numpy as np
 
+from core import lang
+from generation.query_classifier import model_path
+
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
-DATASET_PATH = os.path.join(DATA_DIR, "query_type_dataset.json")
-MODEL_PATH = os.path.join(DATA_DIR, "query_classifier.joblib")
+
+
+def dataset_path(code: str = None) -> str:
+    """Per-language dataset; Ukrainian keeps the name it was built under."""
+    code = code or lang.active_lang()
+    if code == "uk":
+        return os.path.join(DATA_DIR, "query_type_dataset.json")
+    return os.path.join(DATA_DIR, f"query_type_dataset_{code}.json")
 
 RANDOM_STATE = 42
 VAL_FRACTION = 0.2
 
 
 def load_dataset(path: str = None) -> list:
-    path = path or DATASET_PATH
+    path = path or dataset_path()
     if not os.path.exists(path):
         raise FileNotFoundError(
             f"Датасет не знайдено: {path}\n"
@@ -97,7 +106,8 @@ def train(data: list = None, save: bool = True) -> dict:
     if save:
         import joblib
         os.makedirs(DATA_DIR, exist_ok=True)
-        joblib.dump(model, MODEL_PATH)
+        out = model_path()
+        joblib.dump(model, out)
 
     return {
         "n_total": len(data),
@@ -107,7 +117,8 @@ def train(data: list = None, save: bool = True) -> dict:
         "val_accuracy": acc,
         "per_source": per_source,
         "report": classification_report(y_val, pred, zero_division=0),
-        "model_path": MODEL_PATH if save else None,
+        "lang": lang.active_lang(),
+        "model_path": model_path() if save else None,
     }
 
 

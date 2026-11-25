@@ -7,6 +7,8 @@ RangeIndex to match what the PDF parser returns.
 import numpy as np
 import pandas as pd
 
+from core import lang
+
 QUARTERS = ["Q1_2023", "Q2_2023", "Q3_2023", "Q4_2023", "Q1_2024", "Q2_2024", "Q3_2024", "Q4_2024"]
 
 
@@ -55,17 +57,8 @@ def build_tables(seed: int = 42):
     op_profit, fin_expenses, pretax_profit = s["op_profit"], s["fin_expenses"], s["pretax_profit"]
     tax, net_profit, cash_end = s["tax"], s["net_profit"], s["cash_end"]
 
-    income_stmt = pd.DataFrame(
-        {
-            "Показник": [
-                "Виручка", "Собівартість реалізації", "Валовий прибуток",
-                "Операційні витрати", "Прибуток від операційної діяльності",
-                "Фінансові витрати", "Прибуток до оподаткування",
-                "Податок на прибуток", "Чистий прибуток",
-                "Грошові кошти на кінець кварталу",
-            ]
-        }
-    )
+    prof = lang.get()
+    income_stmt = pd.DataFrame({prof.INCOME_HEADER: list(prof.INCOME_LABELS)})
     values = [revenue, cogs, gross_profit, opex, op_profit, fin_expenses, pretax_profit, tax, net_profit, cash_end]
     for i, q in enumerate(QUARTERS):
         income_stmt[q] = [v[i] for v in values]
@@ -80,14 +73,7 @@ def build_tables(seed: int = 42):
     total_liab = current_liab + lt_liab
     equity = total_assets - total_liab
 
-    balance = pd.DataFrame(
-        {
-            "Показник": [
-                "Грошові кошти", "Дебіторська заборгованість", "Всього активів",
-                "Всього зобов'язань", "Власний капітал",
-            ]
-        }
-    )
+    balance = pd.DataFrame({prof.BALANCE_HEADER: list(prof.BALANCE_LABELS)})
     bal_values = [cash_end, receivables, total_assets, total_liab, equity]
     for i, q in enumerate(QUARTERS):
         balance[q] = [v[i] for v in bal_values]
@@ -100,75 +86,84 @@ def build_tables(seed: int = 42):
 # statement, which makes retrieval non-trivial, and it is long enough to split
 # across pages, which makes it the stitching fixture.
 
-_CASHFLOW_ROWS = [
-    # (label, base series key, multiplier)
-    ("Надходження від реалізації продукції", "revenue", 0.95),
-    ("Надходження від оренди", "revenue", 0.012),
-    ("Інші операційні надходження", "revenue", 0.008),
-    ("Оплата постачальникам сировини", "cogs", -0.72),
-    ("Оплата постачальникам послуг", "cogs", -0.18),
-    ("Виплати персоналу", "opex", -0.55),
-    ("Відрахування на соціальні заходи", "opex", -0.12),
-    ("Оплата оренди приміщень", "opex", -0.09),
-    ("Витрати на маркетинг", "opex", -0.14),
-    ("Сплата податку на прибуток", "tax", -1.0),
-    ("Сплачені відсотки за кредитами", "fin_expenses", -1.0),
-    ("Чистий рух коштів від операційної діяльності", None, None),  # підсумок
-    ("Придбання основних засобів", "revenue", -0.11),
-    ("Придбання нематеріальних активів", "revenue", -0.015),
-    ("Надходження від продажу обладнання", "revenue", 0.006),
-    ("Надання позик пов'язаним особам", "revenue", -0.02),
-    ("Повернення раніше наданих позик", "revenue", 0.011),
-    ("Отримані дивіденди", "net_profit", 0.03),
-    ("Чистий рух коштів від інвестиційної діяльності", None, None),  # підсумок
-    ("Надходження від довгострокових кредитів", "revenue", 0.08),
-    ("Погашення довгострокових кредитів", "revenue", -0.055),
-    ("Надходження від короткострокових кредитів", "revenue", 0.03),
-    ("Погашення короткострокових кредитів", "revenue", -0.028),
-    ("Виплачені дивіденди акціонерам", "net_profit", -0.25),
-    ("Витрати на викуп власних акцій", "net_profit", -0.04),
-    ("Чистий рух коштів від фінансової діяльності", None, None),  # підсумок
-    ("Чистий рух грошових коштів за період", None, None),         # підсумок підсумків
-    ("Залишок коштів на кінець періоду", "cash_end", 1.0),
-]
+# Cash flow rows as (base series key, multiplier); None marks a subtotal that
+# is computed from its section rather than generated. Labels are positional and
+# come from the language profile, so both profiles produce the same numbers
+# under different names — which is what makes the two runs comparable.
+_CASHFLOW_ROWS = (
+    ("revenue", 0.95),
+    ("revenue", 0.012),
+    ("revenue", 0.008),
+    ("cogs", -0.72),
+    ("cogs", -0.18),
+    ("opex", -0.55),
+    ("opex", -0.12),
+    ("opex", -0.09),
+    ("opex", -0.14),
+    ("tax", -1.0),
+    ("fin_expenses", -1.0),
+    (None, None),                 # net cash from operating activities
+    ("revenue", -0.11),
+    ("revenue", -0.015),
+    ("revenue", 0.006),
+    ("revenue", -0.02),
+    ("revenue", 0.011),
+    ("net_profit", 0.03),
+    (None, None),                 # net cash from investing activities
+    ("revenue", 0.08),
+    ("revenue", -0.055),
+    ("revenue", 0.03),
+    ("revenue", -0.028),
+    ("net_profit", -0.25),
+    ("net_profit", -0.04),
+    (None, None),                 # net cash from financing activities
+    (None, None),                 # net change in cash for the period
+    ("cash_end", 1.0),
+)
 
+# {subtotal row index: (first member index, one past the last)}. Index-based on
+# purpose: a keyword rule would be one more thing to translate.
 _SUBTOTAL_SPANS = {
-    "Чистий рух коштів від операційної діяльності": (0, 11),
-    "Чистий рух коштів від інвестиційної діяльності": (12, 18),
-    "Чистий рух коштів від фінансової діяльності": (19, 25),
+    11: (0, 11),
+    18: (12, 18),
+    25: (19, 25),
 }
+
+_GRAND_TOTAL_INDEX = 26
 
 
 def build_cashflow(seed: int = 42) -> pd.DataFrame:
     """Cash flow statement; subtotal rows are real sums of their sections."""
+    prof = lang.get()
     s = _base_series(seed)
-    labels = [r[0] for r in _CASHFLOW_ROWS]
+    labels = list(prof.CASHFLOW_LABELS)
+    assert len(labels) == len(_CASHFLOW_ROWS)
+
     values = {}
-
-    for label, key, mult in _CASHFLOW_ROWS:
+    for i, (key, mult) in enumerate(_CASHFLOW_ROWS):
         if key is not None:
-            values[label] = np.round(s[key] * mult, -2)
+            values[i] = np.round(s[key] * mult, -2)
 
-    for label, (lo, hi) in _SUBTOTAL_SPANS.items():
-        members = [labels[i] for i in range(lo, hi) if labels[i] in values]
-        values[label] = np.sum([values[m] for m in members], axis=0)
+    for target, (lo, hi) in _SUBTOTAL_SPANS.items():
+        members = [i for i in range(lo, hi) if i in values]
+        values[target] = np.sum([values[m] for m in members], axis=0)
 
-    values["Чистий рух грошових коштів за період"] = np.sum(
-        [values[k] for k in _SUBTOTAL_SPANS], axis=0
+    values[_GRAND_TOTAL_INDEX] = np.sum(
+        [values[t] for t in _SUBTOTAL_SPANS], axis=0
     )
 
-    cashflow = pd.DataFrame({"Стаття руху коштів": labels})
+    cashflow = pd.DataFrame({prof.CASHFLOW_HEADER: labels})
     for i, q in enumerate(QUARTERS):
-        cashflow[q] = [float(values[lbl][i]) for lbl in labels]
+        cashflow[q] = [float(values[j][i]) for j in range(len(labels))]
     return cashflow
 
 
 if __name__ == "__main__":
     inc, bal = build_tables()
     pd.set_option("display.width", 160)
-    print("=== Звіт про фінансові результати ===")
+    print("=== income ===")
     print(inc.to_string(index=False))
-    print("\n=== Баланс (витяг) ===")
+    print("\n=== balance ===")
     print(bal.to_string(index=False))
-    print("\n=== Рух грошових коштів ===")
+    print("\n=== cashflow ===")
     print(build_cashflow().to_string(index=False))

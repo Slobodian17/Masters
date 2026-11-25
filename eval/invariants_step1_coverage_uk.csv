@@ -1,0 +1,34 @@
+type,query,touched,broad,broad_substring,broad_stem,narrow,labels
+SCALAR_LOOKUP,Яка виручка за Q3 2024?,1,True,True,True,True,Виручка
+SCALAR_LOOKUP,Який чистий прибуток за Q1 2023?,1,True,True,True,True,Чистий прибуток
+AGGREGATE_SUM,Яка сукупна виручка за 2023 рік?,1,True,True,True,False,Виручка
+AGGREGATE_SUM,Яка сумарна собівартість реалізації за 2024 рік?,1,True,True,True,False,Собівартість реалізації
+AGGREGATE_MEAN,Який середній чистий прибуток за 2023 рік?,1,True,True,True,False,Чистий прибуток
+AGGREGATE_MEAN,Яка середня виручка за всі 8 кварталів?,1,True,True,True,False,Виручка
+FIND_MAX_MIN,Який максимальний чистий прибуток серед усіх кварталів?,1,True,True,True,False,Чистий прибуток
+FIND_MAX_MIN,Яка мінімальна виручка серед усіх кварталів?,1,True,True,True,False,Виручка
+COMPARE_TWO,Наскільки виручка Q4 2024 більша за Q4 2023 в абсолютних цифрах?,1,True,True,True,False,Виручка
+COMPARE_TWO,Яка різниця між чистим прибутком Q1 2024 і Q1 2023?,0,False,False,False,False,
+GROWTH_RATE,На скільки відсотків зросла виручка з Q1 2023 по Q1 2024?,1,True,True,True,False,Виручка
+GROWTH_RATE,Який приріст чистого прибутку з Q3 2023 по Q3 2024 у відсотках?,0,False,False,False,False,
+CONDITIONAL_FILTER,Скільки кварталів мали чистий прибуток більше 150000?,1,True,True,True,False,Чистий прибуток
+CONDITIONAL_FILTER,"Яка сумарна виручка за квартали, де чистий прибуток перевищив 200000?",2,True,True,True,False,Виручка; Чистий прибуток
+SCALAR_LOOKUP,Які грошові кошти на кінець Q2 2024?,0,False,False,False,False,
+RATIO,Яка маржа чистого прибутку (%) за Q4 2024?,0,False,False,False,False,
+AGGREGATE_SUM,Яка сума фінансових витрат за 2023 рік?,1,True,False,False,False,Фінансові витрати
+ADVERSARIAL,Яка рентабельність по сегменту B2B за МСФЗ 15 у Q2 2023?,0,False,False,False,False,
+FIND_MAX_MIN,Який максимальний валовий прибуток серед усіх кварталів?,1,True,True,True,False,Валовий прибуток
+SCALAR_LOOKUP,Який власний капітал на Q2 2024?,1,True,True,True,True,Власний капітал
+SCALAR_LOOKUP,Скільки всього активів на Q4 2023?,1,True,True,True,True,Всього активів
+COMPARE_TWO,На скільки зросли всього активів з Q1 2023 по Q4 2024?,1,True,True,True,False,Всього активів
+RATIO,Яка частка власного капіталу у всього активів (%) на Q3 2024?,2,True,True,True,False,Всього активів; Власний капітал
+FIND_MAX_MIN,Яка максимальна дебіторська заборгованість серед усіх кварталів?,0,False,False,False,False,
+AGGREGATE_MEAN,Яка середня величина всього зобов'язань за 2024 рік?,1,True,True,True,False,Всього зобов'язань
+SCALAR_LOOKUP,Скільки виплачено дивідендів акціонерам за Q2 2023?,1,True,False,True,True,Виплачені дивіденди акціонерам
+SCALAR_LOOKUP,Який чистий рух коштів від операційної діяльності за Q4 2024?,1,True,True,True,True,Чистий рух коштів від операційної діяльності
+AGGREGATE_SUM,Яка сума витрат на маркетинг за 2024 рік?,1,True,False,False,False,Витрати на маркетинг
+AGGREGATE_SUM,Скільки всього сплачено відсотків за кредитами за 2023 рік?,1,True,False,True,False,Сплачені відсотки за кредитами
+FIND_MAX_MIN,Які найбільші надходження від реалізації продукції серед усіх кварталів?,1,True,True,True,False,Надходження від реалізації продукції
+CONDITIONAL_FILTER,Скільки кварталів мали чистий рух грошових коштів за період більше 80000?,1,True,True,True,False,Чистий рух грошових коштів за період
+AGGREGATE_MEAN,Який середній чистий рух коштів від інвестиційної діяльності за 2023 рік?,1,True,True,True,False,Чистий рух коштів від інвестиційної діяльності
+GROWTH_RATE,На скільки відсотків зросли надходження від реалізації продукції з Q1 2023 по Q4 2024?,1,True,True,True,False,Надходження від реалізації продукції

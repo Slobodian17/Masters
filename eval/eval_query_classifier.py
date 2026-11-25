@@ -16,6 +16,7 @@ import time
 import numpy as np
 import pandas as pd
 
+from core import lang
 from generation import query_classifier
 from generation.dataset_core import TAXONOMY
 from generation.query_classifier_train import load_dataset, split_by_seed
@@ -32,7 +33,8 @@ ZERO_SHOT_N = 32
 def load_live_queries() -> list:
     """Live labelled queries; adversarial ones belong to the gate."""
     out, seen = [], set()
-    for name in ("test_queries_full.json", "test_queries_phase1.json"):
+    prof = lang.get()
+    for name in (prof.TEST_SET_FULL, prof.TEST_SET_PHASE1):
         with open(os.path.join(HERE, name), encoding="utf-8") as f:
             for it in json.load(f):
                 if it["type"] == "ADVERSARIAL" or it["query"] in seen:
@@ -143,7 +145,7 @@ def main():
             rows.append({"вибірка": label, "n": results[key]["n"],
                          "accuracy": round(results[key]["accuracy"], 4),
                          "латентність_мс": round(results[key]["latency_ms"], 4)})
-    out = os.path.join(HERE, "query_classifier_results.csv")
+    out = os.path.join(HERE, f"query_classifier_results_{lang.active_lang()}.csv")
     pd.DataFrame(rows).to_csv(out, index=False)
     print(f"\nЗбережено: {out}")
     print("\nТри числа наведені окремо і не усереднюються: вибірки мають")

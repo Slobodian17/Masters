@@ -11,31 +11,39 @@ Returns None when no model has been trained, so the pipeline still runs.
 """
 import os
 
+from core import lang
 from generation.dataset_core import TAXONOMY
 
-MODEL_PATH = os.path.join(
-    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-    "data", "query_classifier.joblib",
-)
+_DATA_DIR = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 
-_model = None
-_load_attempted = False
+# The Ukrainian model predates the language profiles and keeps its original
+# file name; training a second language must not overwrite the artefact the
+# phase-2 numbers were measured on.
+_LEGACY_PATH = os.path.join(_DATA_DIR, "query_classifier.joblib")
+
+
+def model_path(code: str = None) -> str:
+    code = code or lang.active_lang()
+    path = os.path.join(_DATA_DIR, f"query_classifier_{code}.joblib")
+    if code == "uk" and not os.path.exists(path) and os.path.exists(_LEGACY_PATH):
+        return _LEGACY_PATH
+    return path
+
+
+_cache = {}
 
 
 def load_model(path: str = None):
-    """Lazy load, cached per process."""
-    global _model, _load_attempted
-    path = path or MODEL_PATH
-    if path == MODEL_PATH:
-        if _load_attempted:
-            return _model
-        _load_attempted = True
-    if not os.path.exists(path):
-        return None
-    import joblib
-    model = joblib.load(path)
-    if path == MODEL_PATH:
-        _model = model
+    """Lazy load, cached per path."""
+    path = path or model_path()
+    if path in _cache:
+        return _cache[path]
+    model = None
+    if os.path.exists(path):
+        import joblib
+        model = joblib.load(path)
+    _cache[path] = model
     return model
 
 
@@ -72,7 +80,8 @@ def classify_with_confidence(query: str, path: str = None):
 def describe() -> dict:
     return {
         "available": is_available(),
-        "model_path": MODEL_PATH,
+        "lang": lang.active_lang(),
+        "model_path": model_path(),
         "classes": len(TAXONOMY),
         "needs_network": False,
         "needs_schema": False,

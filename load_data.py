@@ -5,17 +5,31 @@ retrieval layer's job, called separately before the pipeline.
 """
 import os
 
+from core import lang
 from ingestion.ingest_pdf import extract_tables
 from ingestion.make_sample_pdf import make_pdf, make_multipage_pdf
 from ingestion.synthetic_data import build_tables, build_cashflow
 
-# Naming by a characteristic row label. Names only matter so generated code
-# can address a table; retrieval ranks by content, not by name.
-_NAME_RULES = [
-    ("income", ("виручка", "чистий прибуток")),
-    ("balance", ("всього активів", "власний капітал")),
-    ("cashflow", ("рух коштів", "надходження від реалізації")),
-]
+# Naming by a characteristic row label; markers come from the language
+# profile. Names only matter so generated code can address a table; retrieval
+# ranks by content, not by name.
+
+
+def resolve_pdf(path: str) -> str:
+    """Document file name for the active language.
+
+    Ukrainian keeps the original names, because the frozen phase-0 fixtures
+    carry them. Every other profile gets its own suffix: sharing a file name
+    would let an English run regenerate the frozen PDF, or read it and quietly
+    produce Ukrainian tables under an English profile.
+    """
+    suffix = lang.get().PDF_SUFFIX
+    if not suffix:
+        return path
+    root, ext = os.path.splitext(path)
+    if root.endswith(suffix):
+        return path
+    return f"{root}{suffix}{ext}"
 
 
 def _labels_blob(df) -> str:
@@ -30,7 +44,7 @@ def name_tables(dfs: list) -> dict:
     for i, df in enumerate(dfs):
         blob = _labels_blob(df)
         name = None
-        for candidate, markers in _NAME_RULES:
+        for candidate, markers in lang.get().TABLE_NAME_RULES:
             if candidate in used:
                 continue
             if any(m in blob for m in markers):
@@ -45,6 +59,7 @@ def name_tables(dfs: list) -> dict:
 
 def load_tables(pdf_path: str = "sample_report.pdf", use_pdf: bool = True) -> dict:
     """All logical tables of the document, generating the PDF if missing."""
+    pdf_path = resolve_pdf(pdf_path)
     if use_pdf:
         if not os.path.exists(pdf_path):
             if "multipage" in os.path.basename(pdf_path):

@@ -15,32 +15,29 @@ one gets no chance at all.
 """
 import difflib
 
+from core import lang
 from core.exceptions_taxonomy import _row_label_candidates
 from core.text_utils import tokenize
 
 IN_SCOPE = "IN_SCOPE"
 OUT_OF_SCOPE = "OUT_OF_SCOPE"
 
-# How close a query token must be to a schema token to count. 0.75 tolerates
-# inflection and typos without merging unrelated terms.
-TOKEN_SIMILARITY = 0.75
-
-# Words describing the operation rather than its subject. Without this list
-# every query would score low, since such words never appear in table labels.
-_OPERATION_WORDS = {
-    "сум", "сумарн", "сукупн", "загальн", "всьог", "разом",
-    "середн", "середнь", "максимальн", "мінімальн", "найбільш", "найменш",
-    "різниц", "порівн", "більш", "менш", "перевищ",
-    "відсотк", "відсот", "процент", "маржа", "частк", "рентабельн",
-    "приріст", "зрост", "зросл", "динамік", "темп",
-    "кільк", "квартал", "рік", "рок", "період", "місяц",
-    "показник", "значенн", "величин", "обсяг", "стаття",
-}
+# The similarity cutoff and the operation vocabulary are per-language:
+# Ukrainian needs a looser cutoff because inflected forms of the same term
+# differ by several characters, English does not.
 
 
-def _schema_tokens(tables: dict) -> set:
-    """Every token the document actually contains: row labels and headers."""
+def _schema_tokens(tables: dict, extra_text: str = None) -> set:
+    """Every token the document actually contains: row labels and headers.
+
+    `extra_text` carries a table caption when one is supplied. It names the
+    subject the table itself often leaves out -- rows of dates under a caption
+    that says what the dates measure -- so without it the gate refuses
+    questions the table can answer.
+    """
     tokens = set()
+    if extra_text:
+        tokens |= tokenize(extra_text)
     for name, df in tables.items():
         tokens |= tokenize(name)
         for col in df.columns:
@@ -51,7 +48,8 @@ def _schema_tokens(tables: dict) -> set:
 
 
 def _is_operation_word(token: str) -> bool:
-    return any(token.startswith(w) or w.startswith(token) for w in _OPERATION_WORDS)
+    words = lang.get().OPERATION_WORDS
+    return any(token.startswith(w) or w.startswith(token) for w in words)
 
 
 def _content_tokens(query: str) -> set:
@@ -64,10 +62,10 @@ def _content_tokens(query: str) -> set:
     return out
 
 
-def check(query: str, tables: dict) -> dict:
+def check(query: str, tables: dict, extra_text: str = None) -> dict:
     """Return {"status", "coverage", "matched", "unmatched", "content_tokens"}."""
     content = _content_tokens(query)
-    schema = _schema_tokens(tables)
+    schema = _schema_tokens(tables, extra_text)
 
     if not content:
         # Nothing subject-specific to judge, e.g. "what is the maximum overall".
@@ -77,7 +75,8 @@ def check(query: str, tables: dict) -> dict:
     schema_list = sorted(schema)
     matched, unmatched = [], []
     for t in sorted(content):
-        hit = difflib.get_close_matches(t, schema_list, n=1, cutoff=TOKEN_SIMILARITY)
+        hit = difflib.get_close_matches(t, schema_list, n=1,
+                                        cutoff=lang.get().TOKEN_SIMILARITY)
         (matched if hit else unmatched).append(t)
 
     coverage = len(matched) / len(content)
@@ -86,5 +85,5 @@ def check(query: str, tables: dict) -> dict:
             "unmatched": unmatched, "content_tokens": sorted(content)}
 
 
-def is_in_scope(query: str, tables: dict) -> bool:
-    return check(query, tables)["status"] == IN_SCOPE
+def is_in_scope(query: str, tables: dict, extra_text: str = None) -> bool:
+    return check(query, tables, extra_text)["status"] == IN_SCOPE

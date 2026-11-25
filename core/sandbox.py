@@ -11,6 +11,8 @@ entirely breaks legitimate calls with an opaque KeyError.
 import builtins
 
 import numpy as np
+
+from core import lang
 import pandas as pd
 
 ALLOWED_MODULES = {"pandas", "numpy", "math", "statistics", "itertools", "collections", "re", "decimal"}
@@ -40,14 +42,18 @@ def execute(code: str, tables: dict):
     as `df`. The code must assign its answer to `result`.
     Returns (result, None) on success or (None, Exception) on failure.
     """
-    local_ns = {**tables, "pd": pd, "np": np}
+    # ONE namespace, not two. `exec(code, globals, locals)` with separate
+    # dicts makes every nested scope -- def, lambda, comprehension, generator
+    # -- resolve names against `globals` only, where nothing but builtins
+    # lives. So `df.apply(lambda r: pd.to_numeric(r))` raised
+    # "name 'pd' is not defined" although pd was passed in (defect 20).
+    ns = {**tables, "pd": pd, "np": np, "__builtins__": SAFE_BUILTINS}
     if tables:
-        local_ns.setdefault("df", next(iter(tables.values())))
-    global_ns = {"__builtins__": SAFE_BUILTINS}
+        ns.setdefault("df", next(iter(tables.values())))
     try:
-        exec(code, global_ns, local_ns)
+        exec(code, ns)
     except Exception as e:  # broad on purpose: exceptions drive the repair loop
         return None, e
-    if "result" not in local_ns:
-        return None, NameError("Код не визначив змінну `result`")
-    return local_ns["result"], None
+    if "result" not in ns:
+        return None, NameError(lang.get().NO_RESULT)
+    return ns["result"], None

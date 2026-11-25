@@ -1,3 +1,4 @@
+import os
 """Table extraction from PDF, with multi-page stitching.
 
 camelot in lattice mode is the primary parser and pdfplumber the fallback.
@@ -68,15 +69,118 @@ def _extract_with_camelot(pdf_path: str) -> list:
     return out
 
 
+# pdfplumber's default strategy looks for ruling lines. Financial report
+# tables are usually borderless, so on real filing pages it either finds
+# nothing or shreds the table into one-row fragments that the `len < 2` filter
+# then drops. Measured on 20 TAT-DQA pages: the line strategy found a table on
+# 11, the text strategy on 20 of 20.
+#
+# Off by default all the same: the Phase 0 baseline was measured on
+# sample_report.pdf with the line strategy, and that number has to stay
+# reproducible as measured.
+TEXT_TABLES_ENV = "VKSK_PDF_TEXT_TABLES"
+
+_TEXT_SETTINGS = {"vertical_strategy": "text", "horizontal_strategy": "text"}
+
+
+def text_tables() -> bool:
+    return os.environ.get(TEXT_TABLES_ENV, "0").strip() not in ("", "0", "false", "no")
+
+
+# The text strategy finds a grid on every page, and on a filing page most of
+# that grid is prose: measured on 40 pages, the median fragment was 61 rows x
+# 11 columns with 13% numeric cells, against 6 x 5 and 68% for the annotated
+# table. An honest "table found" metric scored it 2%.
+#
+# So the grid has to be segmented the way a reader segments it: a table is a
+# run of rows that carry figures. One interruption is allowed, because a
+# sub-heading ("Operating expenses:") sits inside a table without ending it.
+TABLE_FILTER_ENV = "VKSK_PDF_TABLE_FILTER"
+MIN_NUM_CELLS = int(os.environ.get("VKSK_PDF_MIN_NUM_CELLS", "2"))
+MIN_TABLE_ROWS = int(os.environ.get("VKSK_PDF_MIN_TABLE_ROWS", "2"))
+MAX_GAP_ROWS = int(os.environ.get("VKSK_PDF_MAX_GAP_ROWS", "1"))
+
+_NUMCELL = re.compile(r"^\(?-?[\d,]+\.?\d*\)?%?$")
+
+
+def table_filter() -> bool:
+    return os.environ.get(TABLE_FILTER_ENV, "0").strip() not in ("", "0", "false", "no")
+
+
+def _numeric_count(row) -> int:
+    k = 0
+    for c in row:
+        s = str(c).replace("$", "").replace(" ", "").strip()
+        if s and _NUMCELL.match(s):
+            k += 1
+    return k
+
+
+def segment_table(raw) -> list:
+    """Split a page-sized grid into the runs of rows that are actually tables."""
+    groups, cur, gap = [], [], 0
+    for row in raw:
+        if _numeric_count(row) >= MIN_NUM_CELLS:
+            cur.append(row)
+            gap = 0
+        elif cur:
+            gap += 1
+            if gap > MAX_GAP_ROWS:
+                groups.append(cur)
+                cur, gap = [], 0
+            else:
+                cur.append(row)          # keep a sub-heading inside the table
+        # a row before any figures is a caption; it is dropped
+    if cur:
+        groups.append(cur)
+    out = []
+    for g in groups:
+        if len(g) < MIN_TABLE_ROWS:
+            continue
+        # drop columns that are empty throughout: the grid invents them
+        keep = [j for j in range(max(len(r) for r in g))
+                if any(str((r[j] if j < len(r) else "") or "").strip() for r in g)]
+        out.append([[(r[j] if j < len(r) else "") for j in keep] for r in g])
+    return out
+
+
+def _unique_columns(header) -> list:
+    """Column names that are unique, so `df[col]` is a Series.
+
+    Text-strategy extraction frequently yields repeated or empty headers on a
+    borderless table. With duplicates pandas returns a DataFrame from `df[col]`
+    and every downstream caller that expects a Series fails -- observed as
+    `'DataFrame' object has no attribute 'unique'` from the L0 repair.
+    """
+    seen, out = {}, []
+    for i, h in enumerate(header):
+        name = str(h).strip() if h is not None and str(h).strip() else f"col_{i}"
+        if name in seen:
+            seen[name] += 1
+            name = f"{name}_{seen[name]}"
+        else:
+            seen[name] = 0
+        out.append(name)
+    return out
+
+
 def _extract_with_pdfplumber(pdf_path: str) -> list:
     import pdfplumber
+    settings = _TEXT_SETTINGS if text_tables() else None
     out = []
     with pdfplumber.open(pdf_path) as pdf:
         for page_no, page in enumerate(pdf.pages, start=1):
-            for raw in page.extract_tables():
-                if not raw or len(raw) < 2:
+            found = (page.extract_tables(settings) if settings
+                     else page.extract_tables())
+            pieces = []
+            for raw in found:
+                if not raw:
                     continue
-                df = pd.DataFrame(raw[1:], columns=raw[0])
+                pieces.extend(segment_table(raw) if table_filter() else [raw])
+            for raw in pieces:
+                if len(raw) < 2:
+                    continue
+                df = pd.DataFrame(raw[1:], columns=_unique_columns(raw[0]))
                 for col in df.columns[1:]:
                     df[col] = _clean_numeric(df[col])
                 out.append({"df": df, "page": page_no})

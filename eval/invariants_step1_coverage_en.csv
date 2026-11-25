@@ -1,0 +1,34 @@
+type,query,touched,broad,broad_substring,broad_stem,narrow,labels
+SCALAR_LOOKUP,What was revenue in Q3 2024?,1,True,True,True,True,Revenue
+SCALAR_LOOKUP,What was net profit in Q1 2023?,1,True,True,True,True,Net profit
+AGGREGATE_SUM,What was total revenue for 2023?,1,True,True,True,False,Revenue
+AGGREGATE_SUM,What was total cost of sales for 2024?,1,True,True,True,False,Cost of sales
+AGGREGATE_MEAN,What was the average net profit for 2023?,1,True,True,True,False,Net profit
+AGGREGATE_MEAN,What was the average revenue across all 8 quarters?,1,True,True,True,False,Revenue
+FIND_MAX_MIN,What was the maximum net profit across all quarters?,1,True,True,True,False,Net profit
+FIND_MAX_MIN,What was the minimum revenue across all quarters?,1,True,True,True,False,Revenue
+COMPARE_TWO,How much larger was revenue in Q4 2024 than in Q4 2023 in absolute terms?,1,True,True,True,False,Revenue
+COMPARE_TWO,What is the difference between net profit in Q1 2024 and Q1 2023?,1,True,True,True,False,Net profit
+GROWTH_RATE,By what percent did revenue grow from Q1 2023 to Q1 2024?,1,True,True,True,False,Revenue
+GROWTH_RATE,What was the growth of net profit from Q3 2023 to Q3 2024 in percent?,1,True,True,True,False,Net profit
+CONDITIONAL_FILTER,How many quarters had net profit above 150000?,1,True,True,True,False,Net profit
+CONDITIONAL_FILTER,What was the total revenue for quarters where net profit exceeded 200000?,2,True,True,True,False,Revenue; Net profit
+SCALAR_LOOKUP,What was cash at end of quarter in Q2 2024?,0,False,False,False,False,
+RATIO,What was the net profit margin (%) in Q4 2024?,1,True,True,True,False,Net profit
+AGGREGATE_SUM,What was the total of finance costs for 2023?,1,True,True,True,False,Finance costs
+ADVERSARIAL,What was the profitability of the B2B segment under IFRS 15 in Q2 2023?,0,False,False,False,False,
+FIND_MAX_MIN,What was the maximum gross profit across all quarters?,1,True,True,True,False,Gross profit
+SCALAR_LOOKUP,What was total equity at Q2 2024?,1,True,True,True,True,Total equity
+SCALAR_LOOKUP,What were total assets at Q4 2023?,1,True,True,True,True,Total assets
+COMPARE_TWO,By how much did total assets grow from Q1 2023 to Q4 2024?,1,True,True,True,False,Total assets
+RATIO,What was the share of total equity in total assets (%) at Q3 2024?,2,True,True,True,False,Total assets; Total equity
+FIND_MAX_MIN,What were the maximum trade receivables across all quarters?,0,False,False,False,False,
+AGGREGATE_MEAN,What were the average total liabilities for 2024?,1,True,True,True,False,Total liabilities
+SCALAR_LOOKUP,How much was paid in dividends to shareholders in Q2 2023?,1,True,False,True,True,Dividends paid to shareholders
+SCALAR_LOOKUP,What was the net cash from operating activities in Q4 2024?,1,True,True,True,True,Net cash from operating activities
+AGGREGATE_SUM,What was the total of marketing expenses for 2024?,1,True,True,True,False,Marketing expenses
+AGGREGATE_SUM,How much interest was paid on loans in total for 2023?,1,True,False,True,False,Interest paid on loans
+FIND_MAX_MIN,What were the largest proceeds from sales of goods across all quarters?,1,True,True,True,False,Proceeds from sales of goods
+CONDITIONAL_FILTER,How many quarters had net change in cash for the period above 80000?,1,True,True,True,False,Net change in cash for the period
+AGGREGATE_MEAN,What was the average net cash from investing activities for 2023?,1,True,True,True,False,Net cash from investing activities
+GROWTH_RATE,By what percent did proceeds from sales of goods grow from Q1 2023 to Q4 2024?,1,True,True,True,False,Proceeds from sales of goods

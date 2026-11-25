@@ -5,6 +5,17 @@ import re
 DETERMINISTIC_FIXABLE = {"KeyError", "IndexError"}
 LLM_REQUIRED = {"TypeError", "ValueError", "SyntaxError", "AttributeError"}
 
+# Not an exception the code raised: the reply was cut at the token limit and
+# what ran was half a program. It is separated because the repair strategy
+# differs in kind -- regenerating the same prompt under the same limit cannot
+# succeed, however many attempts it is given. Measured on FinQA: 112 of 116
+# failures were this, each burning three repair iterations to no effect.
+#
+# This is the clearest case for typed escalation (H4): one strategy for every
+# error class is not merely suboptimal here, it is structurally incapable.
+TRUNCATION = "TRUNCATION"
+BUDGET_FIXABLE = {TRUNCATION}
+
 
 def classify_exception(e: Exception) -> str:
     return type(e).__name__

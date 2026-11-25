@@ -12,16 +12,22 @@ import os
 
 import pandas as pd
 
+from core import lang
 from core.pipeline import run
 from generation import llm_client
 from ingestion.ingest_pdf import extract_tables
+from ingestion.make_sample_pdf import make_multipage_pdf
 from ingestion.synthetic_data import build_cashflow
-from load_data import load_tables
+from load_data import load_tables, resolve_pdf
 from retrieval import structural_index, temporal_index, vector_index
 from retrieval.retrieve import explain, select_tables
 
 PDF = "sample_report_multipage.pdf"
-TEST_SET_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "test_queries_phase1.json")
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+def test_set_path() -> str:
+    return os.path.join(HERE, lang.get().TEST_SET_PHASE1)
 
 SINGLE_INDEXES = {
     "structural": {"structural": structural_index.rank},
@@ -31,7 +37,7 @@ SINGLE_INDEXES = {
 
 
 def load_test_set(path=None):
-    with open(path or TEST_SET_PATH, encoding="utf-8") as f:
+    with open(path or test_set_path(), encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -56,6 +62,14 @@ STITCH_FIXTURES = {
 }
 
 
+def _fixture(path: str) -> str:
+    """Per-language fixture, generated on demand."""
+    p = resolve_pdf(path)
+    if not os.path.exists(p):
+        make_multipage_pdf(p, repeat_header="noheader" not in p)
+    return p
+
+
 def stitching_ablation() -> pd.DataFrame:
     """Stitching ablation on both break variants.
 
@@ -69,6 +83,7 @@ def stitching_ablation() -> pd.DataFrame:
     rows = []
 
     for label, path in STITCH_FIXTURES.items():
+        path = _fixture(path)
         off = extract_tables(path, stitch=False)
         on = extract_tables(path, stitch=True)
 
@@ -136,7 +151,7 @@ def main():
     print("=" * 78)
     print("ФАЗА 1 — ОЦІНКА М1 (Table Stitching) + М2 (гібридний retrieval)")
     print("=" * 78)
-    print(f"Документ: {PDF}")
+    print(f"Мова: {lang.active_lang()}   документ: {resolve_pdf(PDF)}")
     print(f"Таблиць у документі: {len(tables)} -> {({k: v.shape for k, v in tables.items()})}")
     print(f"Запитів у наборі: {len(test_set)} (з них з еталонною таблицею: "
           f"{sum(1 for i in test_set if i['correct_tables'])})")
@@ -191,8 +206,14 @@ def main():
             print(f"      scope={r['scope']}, отримано={r['answer']}, еталон={r['expected']}")
 
     provider = llm_client.active_provider()
-    slug = "" if provider == "mock" else f"_{provider}_{llm_client.active_model().replace('/', '-').replace('.', '-')}"
-    out = os.path.join(os.path.dirname(os.path.abspath(__file__)), f"eval_phase1_results{slug}.csv")
+    code = lang.active_lang()
+    # Same trap as in eval.eval: a different provider or a different language
+    # is a different experiment and must not land on the frozen file.
+    if provider == "mock":
+        slug = "" if code == "uk" else f"_{code}"
+    else:
+        slug = f"_{code}_{provider}_{llm_client.active_model().replace('/', '-').replace('.', '-')}"
+    out = os.path.join(HERE, f"eval_phase1_results{slug}.csv")
     df.to_csv(out, index=False)
     print(f"\nЗбережено: {out}")
 

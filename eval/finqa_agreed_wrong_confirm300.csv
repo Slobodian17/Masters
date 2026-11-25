@@ -1,0 +1,54 @@
+id,gold,value,category,gold_program,question
+GS/2013/page_220.pdf-3,136.2,1.362,DATASET,subtract(236.20; const_100),what is the five year total return on the s&p 500 index?
+CME/2010/page_69.pdf-4,0.56067,1.78359096313912,BASE,divide(420.5; 750.0),as of december 31   2010 what was the par value of the debt outstanding for the fixed rate notes due february 2014 compared to term loan due 2011
+ABMD/2012/page_41.pdf-1,None,1.0,NO_GOLD,greater(162.45; 127.66),did abiomed outperform the nasdaq composite index?
+DRE/2002/page_15.pdf-3,0.10058,0.11114028178874595,BASE,add(45708; 4800); divide(5080; #0),what was the percent of the total gains that was from the sales of land
+IP/2006/page_75.pdf-2,0.20207,0.018807265712907893,OTHER,divide(117; 579),at december 31   2006   what percentage of total future minimum commitments under existing non-cancelable leases and purchase obligations from lease obligations is due in 2008?
+ABMD/2012/page_79.pdf-2,2845.5,1473.0,ROW,add(1473; 4218); divide(#0; const_2),how much of total future minimum lease payments are due currently?
+AMT/2006/page_104.pdf-1,0.09562,3543016.0,ROW,divide(338501; 3540009),as of december 31   2006   what was the total total cash obligations aggregate carrying value of long-term debt due in 2006
+IPG/2017/page_92.pdf-3,0.29434,0.042473919523099854,BASE,divide(79.0; 268.4),what portion of the total contingent acquisition payments is due in the next 12 months?
+DISCA/2011/page_49.pdf-2,1.1756,1.7704062141856616,OTHER,subtract(217.56; const_100); divide(#0; const_100),what was the percentage cumulative total shareholder return on discb from september 18   2008 to december 31   2011?
+ABMD/2012/page_41.pdf-2,None,1.0,NO_GOLD,greater(162.45; 74.40),did abiomed outperform the nasdaq medical equipment index?
+CDNS/2015/page_30.pdf-3,0.9062,90.62,PERCENT,subtract(314.36; const_100); divide(#0; const_100); subtract(223.74; const_100); divide(#2; const_100); subtract(#1; #3),what was the difference in percentage cumulative 5-year total stockholder return for cadence design systems inc . and the nasdaq copmosite for the period ended 1/3/2015?
+JKHY/2019/page_18.pdf-1,-125.06,0.1726647261180206,DATASET,subtract(177.26; 151.16); subtract(#0; 151.16),what was the percentage growth of the 5 year- cumulative total return for the 2018 peer group from 2016 to 2017
+GPN/2010/page_89.pdf-4,-0.04148,-0.06430446194225722,BASE,multiply(762; 41); multiply(713; 42); subtract(#1; #0); divide(#2; #0),what is the percentage change in the total fair value of non-vested shares from 2009 to 2010?
+BLL/2012/page_31.pdf-4,110.49,0.9985999999999999,DATASET,subtract(207.62; 97.13),the five year total return for the period ending 12/31/2012 on ball corporation stock was how much greater than the same return on the dj us containers & packaging index?
+NWS/2019/page_116.pdf-2,-76.0,6092.0,OTHER,subtract(3008; 3084),what was the difference in millions of deferral of revenue and recognition of deferred revenue for the fiscal year ended june 30   2019?
+K/2013/page_23.pdf-2,0.00927,-0.010410287813839559,SIGN,divide(34; 3669),what percent of 2013 sga is due to project k?
+UPS/2007/page_49.pdf-2,0.17447,0.4604200323101777,BASE,divide(108; 619),what portion of total expected cash outflow for capital leases is due in 2018?
+MAR/2004/page_45.pdf-1,68.0,-68.0,SIGN,subtract(1770; 1702),what is the difference of between the carrying amount and the fair value of notes and other long-term assets in 2004?
+INTC/2013/page_31.pdf-4,0.00573,0.09424083769633508,PERCENT,divide(209; 191); divide(#0; 191),what was the percent of the increase in the dow jones u.s . technology index from 2011 to 2012
+ADI/2019/page_29.pdf-2,38.81487,0.0,OTHER,multiply(342313; 113.39); divide(#0; const_1000000),what is the total cash used of the stock repurchase during september 2019   ( in millions ) ?
+AON/2007/page_188.pdf-4,20.0,2e-05,SCALE,subtract(24; 4),what is the difference between the additions for tax positions of prior years and the current year   in millions?
+RSG/2015/page_98.pdf-1,-31.1,0.20051413881748084,DATASET,subtract(46.7; 38.9); subtract(#0; 38.9),in 2015 what was the the percentage change in the account balance
+BLL/2012/page_31.pdf-3,2.13755,1.1049000000000002,OTHER,divide(207.62; 97.13),the five year total return for the period ending 12/31/2012 on ball corporation stock was how much greater than the same return on the s&p 500?
+DRE/2002/page_15.pdf-1,-44.57174,-0.44571740316421166,PERCENT,subtract(5080; 9165); divide(#0; 9165); multiply(#1; const_100),what is the percent change in gain on land sales from 2000 to 2001?
+HIG/2011/page_53.pdf-2,0.18081,367.0,ROW,subtract(320; 271); divide(#0; 271),in 2011 what was the summary of environmental reserves as of december 31   2011
+STT/2009/page_127.pdf-3,2.18154,-0.6856868395773295,OTHER,subtract(-5205; -1636); divide(#0; -1636),what was the percent change in net unrealized loss on available-for-sale securities between 2008 and 2009?
+SNA/2007/page_49.pdf-4,2.02778,0.0277777777777778,OTHER,add(1.11; 1.08); divide(#0; 1.08),what was the percentage change in the cash dividends paid per common share from 2006 to 2007
+IP/2009/page_84.pdf-3,0.166,0.19903691813804172,BASE,divide(124; 747),at december 31   2009   total future minimum commitments under existing non-cancelable leases and purchase obligations what was the percent of the lease obligations compared to the purchase obligations in 2012
+GPN/2013/page_92.pdf-2,-2072.0,-0.1873926019716017,DATASET,subtract(8985; 11057),what is the percentage change in the expected minimum payments from 2014 to 2015?
+IP/2009/page_45.pdf-3,24.0,-24.0,SIGN,subtract(148; 124),considering the years 2011-2012   what is the variation observed in the lease obligations?
+SLG/2001/page_48.pdf-1,None,0.0,NO_GOLD,greater(-4096; 891),was the fair value of the interest rate collar greater than the fair value of the interest rate swap?
+IP/2009/page_45.pdf-1,0.40796,0.6890756302521008,BASE,divide(574; 1407),what percentage of contractual obligations for future payments under existing debt and lease commitments and purchase obligations at december 31   2009 due in 2011 are maturities of long-term debt?
+GPN/2010/page_87.pdf-3,0.34807,-0.3480662983425414,SIGN,divide(6.3; 18.1),in 2010 what was the percent of the income tax benefit to the stock based compensation cost
+MS/2013/page_139.pdf-1,None,1.0,NO_GOLD,greater(538; 503),did the company have more exposure to the insurance industry than the real estate industry in its derivative portfolio?
+MSI/2008/page_69.pdf-3,0.14167,0.09477504139801994,BASE,divide(2690; 18988),in 2006 what was the percent of the operating earnings to the segment net sales
+GRMN/2008/page_85.pdf-2,0.10222,31.700000000000017,OTHER,divide(214.4; 126.6); subtract(#0; const_1); divide(126.6; 70.5); subtract(#2; const_1); subtract(#3; #1),what is the difference between the growth of the balance throughout the fiscal year   during 2007 and 2008?
+JPM/2009/page_175.pdf-3,1.41792,1.3027575107296137,BASE,divide(110457; 77901),in 2008 what was the ratio of the trading assets derivatives - receivables to the payables
+V/2014/page_126.pdf-2,5.08,0.13015629003330767,DATASET,subtract(44.11; 39.03),what is the percentage increase in the fair value of option granted from 2013 to 2014?
+GS/2017/page_132.pdf-4,-4079.0,-51.0,OTHER,subtract(19201; 23280),what was the change in level 3 financial assets from 2016 to 2017 in millions?
+CDW/2017/page_38.pdf-2,0.17917,0.16644375943183687,BASE,divide(2327.2; 12988.7),what was 2016 gross margin percent?
+STT/2007/page_111.pdf-4,52336.0,0.10342428937300407,DATASET,subtract(558368; 506032),what is the percent change in indemnified securities financing between 2006 and 2007?
+C/2008/page_22.pdf-2,445.0,289.0,OTHER,add(367; 78),what was the total after-tax gains in millions for the sale so mastercard shares from 2006 to 2007?
+AWK/2017/page_148.pdf-1,-0.08353,0.08352941176470588,SIGN,subtract(779; 850); divide(#0; 850),by what percentage did average borrowings decrease from 2016 to 2017?
+STT/2011/page_69.pdf-3,0.55263,0.6730769230769231,BASE,divide(105; 190),what was the percent of the aggregate restructuring costs that were employee-related costs in 2010
+BLL/2010/page_35.pdf-3,-0.13666,-1.4782608695652175,OTHER,subtract(634.9; 735.4); divide(#0; 735.4),what was the percentage change in net sales for the discontinued operations between 2008 and 2009?
+IP/2006/page_38.pdf-4,0.21864,0.27982207844723006,OTHER,divide(692; 3165),in 2007 what was the percent of the total debt compared to lease obligations and purchase obligations as part of the contractual obligations for future payments
+KHC/2018/page_132.pdf-1,10.0,1e-05,SCALE,subtract(1224; 1214),how many shares were issued during the period of 2016 to 2018   in millions?
+MO/2016/page_19.pdf-2,None,1.0,NO_GOLD,greater(286.61; 192.56),did altria outperform it's peer group?
+DRE/2012/page_40.pdf-1,-0.46798,0.4679805906667465,SIGN,subtract(26643; 50079); divide(#0; 50079),what was the percentage reduction second generation tenant improvements
+C/2008/page_44.pdf-2,2.50515,-2.5051546391752577,SIGN,subtract(438; -291); divide(#0; 291),what was the percentage change in non-interest revenue from 2007 to 2008?
+UNP/2016/page_52.pdf-2,0.17421,0.16242607619309585,BASE,divide(3474; 19941),in 2015 what was the percent of the total operating revenue that was from chemical freight
+AMAT/2013/page_37.pdf-1,18210.0,118210.0,OTHER,divide(100000; const_100); subtract(118.21; const_100); multiply(#0; #1),what is the total return if 100000 are invested in applied materials in 2008 and sold in 2011?
+CME/2017/page_40.pdf-5,None,1.0,NO_GOLD,greater(370.32; 323.23),did the cme group inc . outperform the s&p 500 over 5 years?

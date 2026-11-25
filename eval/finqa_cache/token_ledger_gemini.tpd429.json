@@ -1,0 +1,8 @@
+{
+  "ts": 1793546902.2704098,
+  "model": "gemini-flash-lite-latest",
+  "calls_24h": 501,
+  "actual_tokens_24h": 1452404,
+  "reserved_tokens_24h": 601200,
+  "body": "{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 500, model: gemini-3.5-flash-lite, description: Generate content requests per day limit exceeded on Free Tier. See https://ai.google.dev/gemini-api/docs/rate-limits.\\nPlease retry in 16h31m37.772305528s."
+}

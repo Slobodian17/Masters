@@ -3,44 +3,26 @@
 Used by the range signal in `verifier` and by the mock semantic check: a margin
 of 608% is clearly wrong, while a sum of 608,000 is ordinary.
 
-Naive prefix matching on "відсот" is not enough. Ukrainian uses the same word
-for "percent" and for "interest on a loan", so "сплачені відсотки за
-кредитами" is an absolute amount, not a rate. The explicit patterns below keep
-the two apart.
+The two pattern families come from the active language profile. Their sizes
+differ for a reason worth recording: Ukrainian uses one word, "відсотки", for
+both a rate and interest paid on a loan, so the interest family exists purely
+to pull those queries back out of the relative branch. English has separate
+words and that family is empty.
 """
-import re
+from core import lang
 
-# Patterns that mark a query as asking for a relative value.
-_RELATIVE_PATTERNS = (
-    r"%",
-    r"\bу\s+відсотк",
-    r"\bв\s+відсотк",
-    r"на\s+скільки\s+відсотк",
-    r"відсотк\w*\s+(?:зрост|приріст|зменш|падінн)",
-    r"маржа",
-    r"маржинальн",
-    r"рентабельн",
-    r"частк",
-    r"приріст",
-    r"зростанн",
-    r"темп\w*\s+зрост",
-)
 
-_RELATIVE_RE = re.compile("|".join(_RELATIVE_PATTERNS), re.IGNORECASE | re.UNICODE)
+def _relative_re():
+    return lang.compile_any(tuple(lang.get().RELATIVE_PATTERNS))
 
-# Contexts where "відсотки" means loan interest. Checked first, takes priority.
-_INTEREST_PATTERNS = (
-    r"відсотк\w*\s+за\s+(?:кредит|позик|депозит|облігац)",
-    r"(?:сплачен|нарахован|отриман)\w*\s+відсотк",
-    r"відсотков\w*\s+(?:витрат|дохід|ставк)",
-)
 
-_INTEREST_RE = re.compile("|".join(_INTEREST_PATTERNS), re.IGNORECASE | re.UNICODE)
+def _interest_re():
+    return lang.compile_any(tuple(lang.get().INTEREST_PATTERNS))
 
 
 def is_interest_query(text: str) -> bool:
-    """True when "відсотки" means loan interest, i.e. a monetary amount."""
-    return bool(_INTEREST_RE.search(str(text)))
+    """True when a percent-word in this query means money, not a rate."""
+    return bool(_interest_re().search(str(text)))
 
 
 def is_relative_query(text: str) -> bool:
@@ -49,4 +31,4 @@ def is_relative_query(text: str) -> bool:
     if is_interest_query(s):
         # An explicit "%" still signals the unit even in a loan-interest query.
         return "%" in s
-    return bool(_RELATIVE_RE.search(s))
+    return bool(_relative_re().search(s))

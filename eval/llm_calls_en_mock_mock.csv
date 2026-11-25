@@ -1,0 +1,19 @@
+type,query,status,iterations,calls_codegen,calls_semantic,calls_method_total,calls_baseline,calls_failed,retries,api_requests_total,prompt_tokens,completion_tokens,elapsed_s
+SCALAR_LOOKUP,What was revenue in Q3 2024?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+SCALAR_LOOKUP,What was net profit in Q1 2023?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+AGGREGATE_SUM,What was total revenue for 2023?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+AGGREGATE_SUM,What was total cost of sales for 2024?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+AGGREGATE_MEAN,What was the average net profit for 2023?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+AGGREGATE_MEAN,What was the average revenue across all 8 quarters?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+FIND_MAX_MIN,What was the maximum net profit across all quarters?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+FIND_MAX_MIN,What was the minimum revenue across all quarters?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+COMPARE_TWO,How much larger was revenue in Q4 2024 than in Q4 2023 in absolute terms?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+COMPARE_TWO,What is the difference between net profit in Q1 2024 and Q1 2023?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+GROWTH_RATE,By what percent did revenue grow from Q1 2023 to Q1 2024?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+GROWTH_RATE,What was the growth of net profit from Q3 2023 to Q3 2024 in percent?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+CONDITIONAL_FILTER,How many quarters had net profit above 150000?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+CONDITIONAL_FILTER,What was the total revenue for quarters where net profit exceeded 200000?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+SCALAR_LOOKUP,What was cash at end of quarter in Q2 2024?,ACCEPT,1,0,0,0,0,0,0,0,0,0,0.0
+RATIO,What was the net profit margin (%) in Q4 2024?,ACCEPT,2,0,0,0,0,0,0,0,0,0,0.0
+AGGREGATE_SUM,What was the total of finance costs for 2023?,ACCEPT,2,0,0,0,0,0,0,0,0,0,0.0
+ADVERSARIAL,What was the profitability of the B2B segment under IFRS 15 in Q2 2023?,ABSTAIN,0,0,0,0,0,0,0,0,0,0,0.0

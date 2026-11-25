@@ -1,18 +1,18 @@
-# Залежності проєкту ВКСК. Версії запінено станом на Фазу 1 —
-# усі числові результати в README отримані саме на цьому наборі.
+# Залежності проєкту ВКСК. Версії запінено — усі числові результати в
+# RESULTS.md отримані саме на цьому наборі.
 #
-# Установка ядра (достатньо, щоб відтворити ВСІ результати Фаз 0-1):
+# Установка ядра (достатньо, щоб відтворити заморожену регресію й усі
+# звіти, що рахуються з кешів без викликів API):
 #     pip install -r requirements.txt
 #
-# Опційні важкі залежності — окремими блоками нижче, вони НЕ потрібні
-# для відтворення заявлених чисел.
+# Опційні важкі залежності — окремими блоками нижче.
 
 # БЮДЖЕТ ПРОЄКТУ: лише безкоштовні рівні API. Платних SDK у списку немає
-# і не має з'являтись — див. ARCHITECTURE.md розділ 7.1.
+# і не має з'являтись.
 
 # ---- ядро ----
 pandas>=2.2,<3
-requests>=2.31          # HTTP-виклики до Groq (OpenAI-сумісний ендпойнт)
+requests>=2.31          # HTTP-виклики до Groq і Gemini, без SDK
 numpy>=2.0,<3
 scikit-learn>=1.5
 joblib>=1.4
@@ -26,33 +26,52 @@ joblib>=1.4
 
 # ---- парсинг PDF ----
 pdfplumber>=0.11
-reportlab>=4.0        # лише для генерації демо-фікстур (make_sample_pdf.py)
+reportlab>=4.0        # генерація демо-фікстур (ingestion/make_sample_pdf.py)
 
-# camelot-py — основний парсер за специфікацією (розділ 7), fallback на
-# pdfplumber спрацьовує автоматично, якщо його немає. Не в основному
-# списку, бо тягне ghostscript як системну залежність:
+# camelot-py — основний парсер за специфікацією, fallback на pdfplumber
+# спрацьовує автоматично, якщо його немає. Не в основному списку, бо тягне
+# ghostscript як системну залежність:
 #     pip install "camelot-py[base]"
 
 # ---- UI ----
 streamlit>=1.40
 
+# ---- графіки для тексту роботи ----
+# eval/plots.py і eval/plots_thesis.py
+matplotlib>=3.8
+
+# ---- DataBench (SemEval-2025 Task 8) ----
+# pyarrow потрібен pandas для .parquet, у яких лежать таблиці корпусу;
+# datasets качає питання з HuggingFace (ingestion/databench_loader.py).
+pyarrow>=15.0
+datasets>=2.19
+
+# databench-eval — пакет організатора задачі. Він обов'язковий і НЕ
+# замінюється власним кодом: усі числа DataBench отримані його
+# Evaluator.default_compare, інакше вони були б непорівнянні з
+# опублікованим лідербордом. Окремо, бо тягне свій набір залежностей:
+#     pip install databench-eval
+
 # ---- опційно: повний векторний стек (retrieval/vector_index.py) ----
 # Без них векторний індекс працює на char-ngram TF-IDF (scikit-learn).
 # Вмикається ЯВНО: VKSK_USE_EMBEDDINGS=1
 # УВАГА: тягне torch (~2 ГБ). На цьому документі дає ГІРШИЙ recall@1,
-# ніж TF-IDF-fallback (74% проти 100%) — вимірювання й пояснення в README.
+# ніж TF-IDF-fallback (74% проти 100%) — вимірювання в RESULTS.md.
 #     pip install chromadb sentence-transformers
 
-# ---- LLM-провайдер ----
-# Groq (безкоштовний тариф, console.groq.com) — єдиний провайдер реальних
-# викликів. Окремого SDK НЕ потрібно: використовується прямий HTTP на
-# requests до https://api.groq.com/openai/v1. Налаштування:
-#     export GROQ_API_KEY=gsk_...
-#     export VKSK_LLM_PROVIDER=groq          # дефолт, можна не задавати
-#     export VKSK_LLM_MODEL=openai/gpt-oss-120b    # дефолт
-#
-# anthropic — ПОЗА БЮДЖЕТОМ, гілка лишена в коді як історична, у
-# відтворюваних прогонах не використовується. Ставити не треба.
+# ---- опційно: знімки інтерфейсу (eval/shoot_ui.py) ----
+#     pip install playwright pillow && python -m playwright install chromium
+
+# ---- LLM-провайдери ----
+# Обидва — безкоштовні тарифи, обидва через прямий HTTP на requests,
+# окремих SDK не потрібно.
+#     export GROQ_API_KEY=...                       # console.groq.com
+#     export GEMINI_API_KEY=...                     # aistudio.google.com
+#     export VKSK_LLM_PROVIDER=groq                 # дефолт
+#     export VKSK_LLM_MODEL=openai/gpt-oss-120b     # дефолт для groq
+# Без ключа вибраного провайдера клієнт автоматично переходить у mock.
 
 # ---- опційно: тести ----
+# tests/ запускаються як модулі (python -m tests.test_lang) і pytest
+# не потребують; він лишається зручністю:
 #     pip install pytest

@@ -14,6 +14,7 @@ from reportlab.lib.units import cm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
+from core import lang
 from ingestion.synthetic_data import build_tables, build_cashflow
 
 # Bundled Unicode TTFs; without them Cyrillic renders as boxes.
@@ -61,14 +62,15 @@ def _df_to_table(df, with_header: bool = True):
 
 def make_pdf(path="sample_report.pdf"):
     """Two tables on one page. Frozen: baseline metrics are tied to it."""
+    prof = lang.get()
     income, balance = build_tables()
     doc = SimpleDocTemplate(path, pagesize=landscape(A4), topMargin=1.5 * cm, bottomMargin=1.5 * cm)
     styles = _styles()
-    elements = [Paragraph("Звіт про фінансові результати (демонстраційні дані)", styles["Title"]), Spacer(1, 12)]
+    elements = [Paragraph(prof.PDF_TITLE, styles["Title"]), Spacer(1, 12)]
 
     elements.append(_df_to_table(income.reset_index(drop=True)))
     elements.append(Spacer(1, 24))
-    elements.append(Paragraph("Баланс (витяг)", styles["Heading2"]))
+    elements.append(Paragraph(prof.PDF_BALANCE_HEADING, styles["Heading2"]))
     elements.append(Spacer(1, 8))
     elements.append(_df_to_table(balance.reset_index(drop=True)))
 
@@ -84,6 +86,7 @@ def make_multipage_pdf(path="sample_report_multipage.pdf", repeat_header: bool =
     fixture cannot silently lose its page split on another machine and make
     the stitching test pass without testing anything.
     """
+    prof = lang.get()
     income, balance = build_tables()
     cashflow = build_cashflow()
 
@@ -93,17 +96,17 @@ def make_multipage_pdf(path="sample_report_multipage.pdf", repeat_header: bool =
     head, tail = cashflow.iloc[:split_after], cashflow.iloc[split_after:]
 
     elements = [
-        Paragraph("Річний звіт (демонстраційні дані) — сторінка 1", styles["Title"]), Spacer(1, 12),
-        Paragraph("Звіт про фінансові результати", styles["Heading2"]), Spacer(1, 8),
+        Paragraph(prof.PDF_MULTIPAGE_TITLE, styles["Title"]), Spacer(1, 12),
+        Paragraph(prof.PDF_INCOME_HEADING, styles["Heading2"]), Spacer(1, 8),
         _df_to_table(income.reset_index(drop=True)),
         Spacer(1, 24),
-        Paragraph("Баланс (витяг)", styles["Heading2"]), Spacer(1, 8),
+        Paragraph(prof.PDF_BALANCE_HEADING, styles["Heading2"]), Spacer(1, 8),
         _df_to_table(balance.reset_index(drop=True)),
         PageBreak(),
-        Paragraph("Звіт про рух грошових коштів", styles["Heading2"]), Spacer(1, 8),
+        Paragraph(prof.PDF_CASHFLOW_HEADING, styles["Heading2"]), Spacer(1, 8),
         _df_to_table(head.reset_index(drop=True)),
         PageBreak(),
-        Paragraph("Звіт про рух грошових коштів (продовження)", styles["Heading2"]), Spacer(1, 8),
+        Paragraph(prof.PDF_CASHFLOW_CONT_HEADING, styles["Heading2"]), Spacer(1, 8),
         _df_to_table(tail.reset_index(drop=True), with_header=repeat_header),
     ]
 
@@ -112,6 +115,8 @@ def make_multipage_pdf(path="sample_report_multipage.pdf", repeat_header: bool =
 
 
 if __name__ == "__main__":
-    print("Створено:", make_pdf())
-    print("Створено:", make_multipage_pdf())
-    print("Створено:", make_multipage_pdf("sample_report_multipage_noheader.pdf", repeat_header=False))
+    from load_data import resolve_pdf
+    print("written:", make_pdf(resolve_pdf("sample_report.pdf")))
+    print("written:", make_multipage_pdf(resolve_pdf("sample_report_multipage.pdf")))
+    print("written:", make_multipage_pdf(
+        resolve_pdf("sample_report_multipage_noheader.pdf"), repeat_header=False))

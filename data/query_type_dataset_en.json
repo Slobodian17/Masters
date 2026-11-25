@@ -1,0 +1,3458 @@
+[
+ {
+  "query": "What was the average capital expenditure for 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "8d02304d3e",
+  "template_idx": 0,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average cash and cash equivalents for 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "1d5d18b942",
+  "template_idx": 0,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average cost of sales for 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "60aa8bd2cb",
+  "template_idx": 0,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average dividends paid for 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "a8da88119a",
+  "template_idx": 0,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average finance costs for 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "22589c25af",
+  "template_idx": 0,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average gross profit for 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "c4c3aec2f4",
+  "template_idx": 0,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average income tax for 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "a7a6ff4ada",
+  "template_idx": 0,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average interest paid for 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "664a5c8865",
+  "template_idx": 0,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average inventory for 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "bf850b687a",
+  "template_idx": 0,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average net cash from operating activities for 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "9e8436bf6d",
+  "template_idx": 0,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average net profit for 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "5cb1c2563f",
+  "template_idx": 0,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average operating expenses for 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "979e9428c5",
+  "template_idx": 0,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average operating profit for 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "0c609c8ece",
+  "template_idx": 0,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average revenue for 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "947f81e8ae",
+  "template_idx": 0,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average total assets for 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "a19ac23836",
+  "template_idx": 0,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average total equity for 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "5b9a8a182c",
+  "template_idx": 0,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average total liabilities for 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "fd175fa7c5",
+  "template_idx": 0,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the average trade receivables for 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "f04fed030e",
+  "template_idx": 0,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean capital expenditure across the quarters of 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "c2c786f18a",
+  "template_idx": 1,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean cash and cash equivalents across the quarters of 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "4cb817705e",
+  "template_idx": 1,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean cost of sales across the quarters of 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "203955f986",
+  "template_idx": 1,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean dividends paid across the quarters of 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "ff28453f74",
+  "template_idx": 1,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean finance costs across the quarters of 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "43b416d642",
+  "template_idx": 1,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean gross profit across the quarters of 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "2a9f61e48e",
+  "template_idx": 1,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean income tax across the quarters of 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "84f42a76af",
+  "template_idx": 1,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean interest paid across the quarters of 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "f94bbd1964",
+  "template_idx": 1,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean inventory across the quarters of 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "a9b75716ef",
+  "template_idx": 1,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean net cash from operating activities across the quarters of 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "32f72b5f50",
+  "template_idx": 1,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean net profit across the quarters of 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "fc4f275203",
+  "template_idx": 1,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean operating expenses across the quarters of 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "e366a80b3b",
+  "template_idx": 1,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean operating profit across the quarters of 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "6738b87a8c",
+  "template_idx": 1,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean revenue across the quarters of 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "4dd6889d0a",
+  "template_idx": 1,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean total assets across the quarters of 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "5e1217db40",
+  "template_idx": 1,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean total equity across the quarters of 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "12e1234698",
+  "template_idx": 1,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean total liabilities across the quarters of 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "abbb541572",
+  "template_idx": 1,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Mean trade receivables across the quarters of 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "076d88a0cd",
+  "template_idx": 1,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much capital expenditure per quarter in 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "5f610f59eb",
+  "template_idx": 2,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much cash and cash equivalents per quarter in 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "6d864bd786",
+  "template_idx": 2,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much cost of sales per quarter in 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "1e011bc48e",
+  "template_idx": 2,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much dividends paid per quarter in 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "e80d4093ea",
+  "template_idx": 2,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much finance costs per quarter in 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "6177985dad",
+  "template_idx": 2,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much gross profit per quarter in 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "28108b4222",
+  "template_idx": 2,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much income tax per quarter in 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "a082256dfb",
+  "template_idx": 2,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much interest paid per quarter in 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "52119434f7",
+  "template_idx": 2,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much inventory per quarter in 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "58d7e3e215",
+  "template_idx": 2,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much net cash from operating activities per quarter in 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "a23ad235fe",
+  "template_idx": 2,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much net profit per quarter in 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "957eb92cc1",
+  "template_idx": 2,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much operating expenses per quarter in 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "245a7a7383",
+  "template_idx": 2,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much operating profit per quarter in 2024?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "641f7fefb4",
+  "template_idx": 2,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much revenue per quarter in 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "2eb5233d39",
+  "template_idx": 2,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much total assets per quarter in 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "a1b97ced99",
+  "template_idx": 2,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much total equity per quarter in 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "ef92f64a28",
+  "template_idx": 2,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much total liabilities per quarter in 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "b0f2377dc4",
+  "template_idx": 2,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "On average, how much trade receivables per quarter in 2023?",
+  "type": "AGGREGATE_MEAN",
+  "seed_id": "825b37e528",
+  "template_idx": 2,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total capital expenditure for 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "7500e58caa",
+  "template_idx": 0,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total cash and cash equivalents for 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "d57486bc2a",
+  "template_idx": 0,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total cost of sales for 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "b7f3ba79de",
+  "template_idx": 0,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total dividends paid for 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "3be6492473",
+  "template_idx": 0,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total finance costs for 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "031f6c5f56",
+  "template_idx": 0,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total gross profit for 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "1e187a85b7",
+  "template_idx": 0,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total income tax for 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "f911594b49",
+  "template_idx": 0,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total interest paid for 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "133e94a47a",
+  "template_idx": 0,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total inventory for 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "119f5c68ca",
+  "template_idx": 0,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total net cash from operating activities for 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "7261fd4f22",
+  "template_idx": 0,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total net profit for 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "c544d2efb0",
+  "template_idx": 0,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total operating expenses for 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "92a6032359",
+  "template_idx": 0,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total operating profit for 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "37399ccd8d",
+  "template_idx": 0,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total revenue for 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "5f904f7f7e",
+  "template_idx": 0,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total total assets for 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "debd14be81",
+  "template_idx": 0,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total total equity for 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "7ccd851f19",
+  "template_idx": 0,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total total liabilities for 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "cc59188b97",
+  "template_idx": 0,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total trade receivables for 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "6be87a7332",
+  "template_idx": 0,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum capital expenditure across all quarters of 2024.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "45b258a20c",
+  "template_idx": 1,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum cash and cash equivalents across all quarters of 2023.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "51b0885387",
+  "template_idx": 1,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum cost of sales across all quarters of 2023.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "369d0eba14",
+  "template_idx": 1,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum dividends paid across all quarters of 2023.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "be32b58642",
+  "template_idx": 1,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum finance costs across all quarters of 2023.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "3d80356c92",
+  "template_idx": 1,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum gross profit across all quarters of 2024.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "02cfbaec63",
+  "template_idx": 1,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum income tax across all quarters of 2024.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "080b0db66b",
+  "template_idx": 1,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum interest paid across all quarters of 2023.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "05804d0440",
+  "template_idx": 1,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum inventory across all quarters of 2024.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "d076720ea1",
+  "template_idx": 1,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum net cash from operating activities across all quarters of 2023.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "bf04b322f0",
+  "template_idx": 1,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum net profit across all quarters of 2024.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "721451596b",
+  "template_idx": 1,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum operating expenses across all quarters of 2023.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "d9a36560b4",
+  "template_idx": 1,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum operating profit across all quarters of 2024.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "5868e3d8eb",
+  "template_idx": 1,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum revenue across all quarters of 2023.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "4522dff38b",
+  "template_idx": 1,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum total assets across all quarters of 2023.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "e61184978e",
+  "template_idx": 1,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum total equity across all quarters of 2023.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "987fad310a",
+  "template_idx": 1,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum total liabilities across all quarters of 2024.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "e681ff58e0",
+  "template_idx": 1,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Sum trade receivables across all quarters of 2024.",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "648711563e",
+  "template_idx": 1,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much capital expenditure in total over 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "cc442f9751",
+  "template_idx": 2,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much cash and cash equivalents in total over 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "99b507386c",
+  "template_idx": 2,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much cost of sales in total over 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "bdac075ee8",
+  "template_idx": 2,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much dividends paid in total over 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "8501616edc",
+  "template_idx": 2,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much finance costs in total over 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "7d98598f0b",
+  "template_idx": 2,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much gross profit in total over 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "3a4ca83c73",
+  "template_idx": 2,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much income tax in total over 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "84a8ceba58",
+  "template_idx": 2,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much interest paid in total over 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "c70a923b53",
+  "template_idx": 2,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much inventory in total over 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "2b3e52e3c6",
+  "template_idx": 2,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much net cash from operating activities in total over 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "2f12aafd85",
+  "template_idx": 2,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much net profit in total over 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "f15a4293c9",
+  "template_idx": 2,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much operating expenses in total over 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "bee9d3beb0",
+  "template_idx": 2,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much operating profit in total over 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "b8f5f87667",
+  "template_idx": 2,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much revenue in total over 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "5902726475",
+  "template_idx": 2,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much total assets in total over 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "9a47948e49",
+  "template_idx": 2,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much total equity in total over 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "b905e425c0",
+  "template_idx": 2,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much total liabilities in total over 2024?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "9ededf9315",
+  "template_idx": 2,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much trade receivables in total over 2023?",
+  "type": "AGGREGATE_SUM",
+  "seed_id": "17881f3929",
+  "template_idx": 2,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between capital expenditure in Q2 2024 and Q1 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "651bb36559",
+  "template_idx": 0,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between cash and cash equivalents in Q2 2024 and Q3 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "0ad8e349e5",
+  "template_idx": 0,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between cost of sales in Q4 2024 and Q2 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "e33416c0c3",
+  "template_idx": 0,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between dividends paid in Q2 2024 and Q1 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "8b6ae9467f",
+  "template_idx": 0,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between finance costs in Q1 2024 and Q3 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "33c41a59d2",
+  "template_idx": 0,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between gross profit in Q1 2024 and Q2 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "31c0ed046a",
+  "template_idx": 0,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between income tax in Q2 2024 and Q4 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "83c89e5b00",
+  "template_idx": 0,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between interest paid in Q4 2023 and Q3 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "35cc23393b",
+  "template_idx": 0,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between inventory in Q3 2024 and Q1 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "7444735d41",
+  "template_idx": 0,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between net cash from operating activities in Q3 2024 and Q1 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "c1bd167741",
+  "template_idx": 0,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between net profit in Q4 2024 and Q2 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "7d9b441ff1",
+  "template_idx": 0,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between operating expenses in Q4 2024 and Q1 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "fd526c91c7",
+  "template_idx": 0,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between operating profit in Q3 2024 and Q3 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "7d1c8a57dc",
+  "template_idx": 0,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between revenue in Q4 2024 and Q1 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "041317f477",
+  "template_idx": 0,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between total assets in Q3 2024 and Q2 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "562d838506",
+  "template_idx": 0,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between total equity in Q1 2024 and Q3 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "73860772d4",
+  "template_idx": 0,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between total liabilities in Q3 2023 and Q1 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "266f84ab3e",
+  "template_idx": 0,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What is the difference between trade receivables in Q4 2024 and Q3 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "9f8c8bd6e5",
+  "template_idx": 0,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was capital expenditure in Q4 2024 than in Q4 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "b82d92df02",
+  "template_idx": 1,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was cash and cash equivalents in Q4 2024 than in Q3 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "f324c0e73a",
+  "template_idx": 1,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was cost of sales in Q3 2023 than in Q2 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "4218ccab22",
+  "template_idx": 1,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was dividends paid in Q2 2024 than in Q4 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "bf2cb303b3",
+  "template_idx": 1,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was finance costs in Q4 2023 than in Q2 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "621d0770da",
+  "template_idx": 1,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was gross profit in Q4 2024 than in Q4 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "178414ac3e",
+  "template_idx": 1,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was income tax in Q3 2024 than in Q2 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "835e3d794e",
+  "template_idx": 1,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was interest paid in Q3 2024 than in Q4 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "e393b51e96",
+  "template_idx": 1,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was inventory in Q2 2024 than in Q3 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "ea925681d1",
+  "template_idx": 1,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was net cash from operating activities in Q3 2024 than in Q2 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "6da27bbf81",
+  "template_idx": 1,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was net profit in Q4 2024 than in Q1 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "0b79930f5d",
+  "template_idx": 1,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was operating expenses in Q4 2024 than in Q2 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "3a710865ad",
+  "template_idx": 1,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was operating profit in Q3 2024 than in Q2 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "16e136d011",
+  "template_idx": 1,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was revenue in Q4 2024 than in Q3 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "991d54de4f",
+  "template_idx": 1,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was total assets in Q4 2024 than in Q4 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "8cc4b951fb",
+  "template_idx": 1,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was total equity in Q3 2024 than in Q1 2024?",
+  "type": "COMPARE_TWO",
+  "seed_id": "84a1b85c2e",
+  "template_idx": 1,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was total liabilities in Q4 2023 than in Q3 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "76922b573a",
+  "template_idx": 1,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How much larger was trade receivables in Q1 2024 than in Q2 2023?",
+  "type": "COMPARE_TWO",
+  "seed_id": "9d330cce32",
+  "template_idx": 1,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare capital expenditure in Q1 2024 and Q2 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "634e712ceb",
+  "template_idx": 2,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare cash and cash equivalents in Q2 2023 and Q3 2023 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "69984a287c",
+  "template_idx": 2,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare cost of sales in Q3 2023 and Q2 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "d1793d55a2",
+  "template_idx": 2,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare dividends paid in Q4 2023 and Q3 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "10b6994321",
+  "template_idx": 2,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare finance costs in Q4 2023 and Q4 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "5996af7512",
+  "template_idx": 2,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare gross profit in Q4 2023 and Q3 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "6e87c05e16",
+  "template_idx": 2,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare income tax in Q4 2023 and Q3 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "4152b6fba2",
+  "template_idx": 2,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare interest paid in Q1 2024 and Q3 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "9b23f35c53",
+  "template_idx": 2,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare inventory in Q4 2023 and Q4 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "d7d6e9124c",
+  "template_idx": 2,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare net cash from operating activities in Q4 2023 and Q3 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "e5f1ed193b",
+  "template_idx": 2,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare net profit in Q2 2024 and Q4 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "229038c41e",
+  "template_idx": 2,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare operating expenses in Q3 2023 and Q3 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "6743005959",
+  "template_idx": 2,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare operating profit in Q1 2023 and Q4 2023 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "8b554ddaf6",
+  "template_idx": 2,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare revenue in Q2 2023 and Q3 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "03864e4a02",
+  "template_idx": 2,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare total assets in Q1 2023 and Q3 2023 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "fe5fdbfc92",
+  "template_idx": 2,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare total equity in Q4 2023 and Q4 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "9944f1b966",
+  "template_idx": 2,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare total liabilities in Q3 2023 and Q3 2024 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "6702ebc45e",
+  "template_idx": 2,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Compare trade receivables in Q2 2023 and Q4 2023 in absolute terms.",
+  "type": "COMPARE_TWO",
+  "seed_id": "fcacd1415f",
+  "template_idx": 2,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had capital expenditure above 1000000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "63621565cf",
+  "template_idx": 0,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had cash and cash equivalents above 50000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "97813c3a33",
+  "template_idx": 0,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had cost of sales above 500000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "73e05f5c91",
+  "template_idx": 0,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had dividends paid above 200000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "e4e55dea62",
+  "template_idx": 0,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had finance costs above 200000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "6598a4f00a",
+  "template_idx": 0,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had gross profit above 100000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "5db9c8f338",
+  "template_idx": 0,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had income tax above 150000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "f0f156979c",
+  "template_idx": 0,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had interest paid above 150000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "9f8f4000b2",
+  "template_idx": 0,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had inventory above 50000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "06bcbcf97a",
+  "template_idx": 0,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had net cash from operating activities above 1000000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "995f23c874",
+  "template_idx": 0,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had net profit above 150000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "320ddc673a",
+  "template_idx": 0,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had operating expenses above 50000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "e4e3088699",
+  "template_idx": 0,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had operating profit above 200000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "7c4b359894",
+  "template_idx": 0,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had revenue above 1000000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "2acad8a9d9",
+  "template_idx": 0,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had total assets above 200000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "b54f092073",
+  "template_idx": 0,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had total equity above 500000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "f57f793c8e",
+  "template_idx": 0,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had total liabilities above 1000000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "ac4a749a67",
+  "template_idx": 0,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "How many quarters had trade receivables above 50000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "092bc2dc42",
+  "template_idx": 0,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where capital expenditure exceeded 200000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "106fc5cb7b",
+  "template_idx": 1,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where cash and cash equivalents exceeded 200000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "922f92bf92",
+  "template_idx": 1,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where cost of sales exceeded 100000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "832c986ada",
+  "template_idx": 1,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where dividends paid exceeded 150000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "acd1efced9",
+  "template_idx": 1,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where finance costs exceeded 500000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "d2127a2922",
+  "template_idx": 1,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where gross profit exceeded 50000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "aa6addac94",
+  "template_idx": 1,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where income tax exceeded 200000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "9e1a8bd182",
+  "template_idx": 1,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where interest paid exceeded 1000000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "92a10d9baf",
+  "template_idx": 1,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where inventory exceeded 50000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "50a0ea7ef7",
+  "template_idx": 1,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where net cash from operating activities exceeded 1000000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "7dbc7e3fcf",
+  "template_idx": 1,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where net profit exceeded 200000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "2b6b800907",
+  "template_idx": 1,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where operating expenses exceeded 150000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "c005a0af8c",
+  "template_idx": 1,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where operating profit exceeded 150000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "2c3a3e8ffb",
+  "template_idx": 1,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where revenue exceeded 150000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "862f9837b9",
+  "template_idx": 1,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where total assets exceeded 100000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "ec47c49852",
+  "template_idx": 1,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where total equity exceeded 150000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "29460def0a",
+  "template_idx": 1,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where total liabilities exceeded 150000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "ccc03cc738",
+  "template_idx": 1,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "List the quarters where trade receivables exceeded 150000.",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "6b13cb3286",
+  "template_idx": 1,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did capital expenditure stay below 150000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "8a21f0bbb7",
+  "template_idx": 2,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did cash and cash equivalents stay below 1000000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "b17ae3d0f1",
+  "template_idx": 2,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did cost of sales stay below 50000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "2ec17919e8",
+  "template_idx": 2,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did dividends paid stay below 200000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "ee7af82fcb",
+  "template_idx": 2,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did finance costs stay below 100000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "1edec46198",
+  "template_idx": 2,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did gross profit stay below 50000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "40e0ef17ec",
+  "template_idx": 2,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did income tax stay below 50000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "57cba74f2a",
+  "template_idx": 2,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did interest paid stay below 500000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "b94e8d4582",
+  "template_idx": 2,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did inventory stay below 50000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "9bd7dac640",
+  "template_idx": 2,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did net cash from operating activities stay below 500000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "30a2efdb2c",
+  "template_idx": 2,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did net profit stay below 150000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "01671027f1",
+  "template_idx": 2,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did operating expenses stay below 500000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "3773e66d0f",
+  "template_idx": 2,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did operating profit stay below 1000000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "19d406ddf3",
+  "template_idx": 2,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did revenue stay below 100000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "5fdb1bf2a7",
+  "template_idx": 2,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did total assets stay below 100000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "f67e49ac92",
+  "template_idx": 2,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did total equity stay below 1000000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "765d28bec2",
+  "template_idx": 2,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did total liabilities stay below 100000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "6a347bea92",
+  "template_idx": 2,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In how many quarters did trade receivables stay below 1000000?",
+  "type": "CONDITIONAL_FILTER",
+  "seed_id": "95d458874b",
+  "template_idx": 2,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum capital expenditure across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "26e75df567",
+  "template_idx": 0,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum cash and cash equivalents across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "5dd99660e5",
+  "template_idx": 0,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum cost of sales across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "4190481ba5",
+  "template_idx": 0,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum dividends paid across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "fb17c2d696",
+  "template_idx": 0,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum finance costs across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "8f02b87f04",
+  "template_idx": 0,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum gross profit across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "aa644f7d5d",
+  "template_idx": 0,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum income tax across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "3faf5a159f",
+  "template_idx": 0,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum interest paid across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "2714e434cb",
+  "template_idx": 0,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum inventory across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "2320363452",
+  "template_idx": 0,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum net cash from operating activities across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "faefa9824c",
+  "template_idx": 0,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum net profit across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "bd2f2f11d0",
+  "template_idx": 0,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum operating expenses across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "5dbfe4a3ac",
+  "template_idx": 0,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum operating profit across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "dfbd3d3fac",
+  "template_idx": 0,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum revenue across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "bedd5ae462",
+  "template_idx": 0,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum total assets across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "3947436956",
+  "template_idx": 0,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum total equity across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "2ddb3a669d",
+  "template_idx": 0,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum total liabilities across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "27118633b0",
+  "template_idx": 0,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the maximum trade receivables across all quarters?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "2494f6512f",
+  "template_idx": 0,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was capital expenditure lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "fcd3ebc1c3",
+  "template_idx": 1,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was cash and cash equivalents lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "3946daf258",
+  "template_idx": 1,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was cost of sales lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "b96280ada2",
+  "template_idx": 1,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was dividends paid lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "605e9df32a",
+  "template_idx": 1,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was finance costs lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "9ff5c0bec0",
+  "template_idx": 1,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was gross profit lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "f54da80ead",
+  "template_idx": 1,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was income tax lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "30f6bdf3a7",
+  "template_idx": 1,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was interest paid lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "3df60ca57c",
+  "template_idx": 1,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was inventory lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "e53852c8e7",
+  "template_idx": 1,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was net cash from operating activities lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "08349f3bff",
+  "template_idx": 1,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was net profit lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "8aa7d7c0d7",
+  "template_idx": 1,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was operating expenses lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "1216493e81",
+  "template_idx": 1,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was operating profit lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "287ef4df06",
+  "template_idx": 1,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was revenue lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "f0f5211d68",
+  "template_idx": 1,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was total assets lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "cea8c01578",
+  "template_idx": 1,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was total equity lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "1bd807e310",
+  "template_idx": 1,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was total liabilities lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "f73d0addf7",
+  "template_idx": 1,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "In which quarter was trade receivables lowest?",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "4edacadd01",
+  "template_idx": 1,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest capital expenditure over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "506b38bdd6",
+  "template_idx": 2,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest cash and cash equivalents over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "a7e23756c2",
+  "template_idx": 2,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest cost of sales over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "e5bed98d8a",
+  "template_idx": 2,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest dividends paid over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "b59e2b09e4",
+  "template_idx": 2,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest finance costs over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "6ebf4c1880",
+  "template_idx": 2,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest gross profit over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "cc465ee491",
+  "template_idx": 2,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest income tax over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "63d3ae9774",
+  "template_idx": 2,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest interest paid over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "e445ac6123",
+  "template_idx": 2,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest inventory over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "cd43c78470",
+  "template_idx": 2,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest net cash from operating activities over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "65ca1d573f",
+  "template_idx": 2,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest net profit over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "06e6a1b7fa",
+  "template_idx": 2,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest operating expenses over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "e89679f7cf",
+  "template_idx": 2,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest operating profit over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "fe56068f78",
+  "template_idx": 2,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest revenue over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "7f682bc5b6",
+  "template_idx": 2,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest total assets over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "86b3cdf492",
+  "template_idx": 2,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest total equity over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "d45475a317",
+  "template_idx": 2,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest total liabilities over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "44e41ebe67",
+  "template_idx": 2,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Find the largest trade receivables over the whole period.",
+  "type": "FIND_MAX_MIN",
+  "seed_id": "1073cec14a",
+  "template_idx": 2,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did capital expenditure grow from Q4 2023 to Q1 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "2d08c5e35f",
+  "template_idx": 0,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did cash and cash equivalents grow from Q2 2023 to Q3 2023?",
+  "type": "GROWTH_RATE",
+  "seed_id": "f1f3c42651",
+  "template_idx": 0,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did cost of sales grow from Q1 2024 to Q3 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "a548a2604f",
+  "template_idx": 0,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did dividends paid grow from Q2 2023 to Q3 2023?",
+  "type": "GROWTH_RATE",
+  "seed_id": "bc55a609a2",
+  "template_idx": 0,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did finance costs grow from Q4 2023 to Q1 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "3197fe2f01",
+  "template_idx": 0,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did gross profit grow from Q1 2023 to Q3 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "f226e0fdf9",
+  "template_idx": 0,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did income tax grow from Q1 2023 to Q3 2023?",
+  "type": "GROWTH_RATE",
+  "seed_id": "9f7742ef0b",
+  "template_idx": 0,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did interest paid grow from Q1 2024 to Q2 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "c595eb52a5",
+  "template_idx": 0,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did inventory grow from Q4 2023 to Q1 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "191b33e42b",
+  "template_idx": 0,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did net cash from operating activities grow from Q3 2024 to Q4 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "685fbfade6",
+  "template_idx": 0,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did net profit grow from Q4 2023 to Q4 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "8abee80146",
+  "template_idx": 0,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did operating expenses grow from Q1 2024 to Q2 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "6eb85bf59a",
+  "template_idx": 0,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did operating profit grow from Q3 2023 to Q3 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "41798aeedf",
+  "template_idx": 0,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did revenue grow from Q1 2023 to Q1 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "6baad69cf4",
+  "template_idx": 0,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did total assets grow from Q4 2023 to Q1 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "f4bb2a59ab",
+  "template_idx": 0,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did total equity grow from Q4 2023 to Q1 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "bcd77b73d5",
+  "template_idx": 0,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did total liabilities grow from Q3 2023 to Q2 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "f1dbb7c7fd",
+  "template_idx": 0,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "By what percent did trade receivables grow from Q1 2023 to Q3 2023?",
+  "type": "GROWTH_RATE",
+  "seed_id": "bd9abc5b3a",
+  "template_idx": 0,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of capital expenditure from Q2 2024 to Q4 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "f52298b362",
+  "template_idx": 1,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of cash and cash equivalents from Q3 2023 to Q1 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "464c6a2f77",
+  "template_idx": 1,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of cost of sales from Q2 2023 to Q4 2023 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "36a3ad137f",
+  "template_idx": 1,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of dividends paid from Q1 2024 to Q3 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "07266b1b91",
+  "template_idx": 1,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of finance costs from Q3 2024 to Q4 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "907e230b3c",
+  "template_idx": 1,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of gross profit from Q2 2024 to Q3 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "294076a503",
+  "template_idx": 1,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of income tax from Q2 2023 to Q4 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "92dbf02eeb",
+  "template_idx": 1,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of interest paid from Q3 2024 to Q4 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "a5d8b6caca",
+  "template_idx": 1,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of inventory from Q1 2023 to Q3 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "55c5224a90",
+  "template_idx": 1,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of net cash from operating activities from Q2 2023 to Q4 2023 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "e926d91a03",
+  "template_idx": 1,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of net profit from Q1 2024 to Q4 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "f4f51664f1",
+  "template_idx": 1,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of operating expenses from Q1 2023 to Q2 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "eda7e4a1cb",
+  "template_idx": 1,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of operating profit from Q1 2023 to Q1 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "7476672418",
+  "template_idx": 1,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of revenue from Q4 2023 to Q2 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "bdb93e39e8",
+  "template_idx": 1,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of total assets from Q2 2024 to Q4 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "91b8466697",
+  "template_idx": 1,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of total equity from Q1 2023 to Q3 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "138f4d90b1",
+  "template_idx": 1,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of total liabilities from Q1 2023 to Q3 2023 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "a718605e40",
+  "template_idx": 1,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the growth of trade receivables from Q2 2023 to Q4 2024 in percent?",
+  "type": "GROWTH_RATE",
+  "seed_id": "bc790dad9a",
+  "template_idx": 1,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in capital expenditure between Q3 2023 and Q4 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "a1ac0fadf6",
+  "template_idx": 2,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in cash and cash equivalents between Q3 2023 and Q4 2023?",
+  "type": "GROWTH_RATE",
+  "seed_id": "1e2bad5376",
+  "template_idx": 2,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in cost of sales between Q3 2023 and Q3 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "c89f30bb7b",
+  "template_idx": 2,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in dividends paid between Q2 2023 and Q2 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "347a08022a",
+  "template_idx": 2,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in finance costs between Q4 2023 and Q3 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "5dc1ee32b6",
+  "template_idx": 2,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in gross profit between Q1 2024 and Q2 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "9e3ef8b66b",
+  "template_idx": 2,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in income tax between Q3 2023 and Q3 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "7605cc822d",
+  "template_idx": 2,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in interest paid between Q1 2023 and Q4 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "553a06db7e",
+  "template_idx": 2,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in inventory between Q1 2023 and Q4 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "ef516ea178",
+  "template_idx": 2,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in net cash from operating activities between Q3 2023 and Q3 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "75139e9e81",
+  "template_idx": 2,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in net profit between Q4 2023 and Q1 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "bd152ab20e",
+  "template_idx": 2,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in operating expenses between Q2 2024 and Q3 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "f240ac1078",
+  "template_idx": 2,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in operating profit between Q1 2023 and Q3 2023?",
+  "type": "GROWTH_RATE",
+  "seed_id": "8876866974",
+  "template_idx": 2,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in revenue between Q1 2024 and Q3 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "eae0252f48",
+  "template_idx": 2,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in total assets between Q1 2023 and Q2 2023?",
+  "type": "GROWTH_RATE",
+  "seed_id": "7eda2ebdc9",
+  "template_idx": 2,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in total equity between Q4 2023 and Q1 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "aa546becd8",
+  "template_idx": 2,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in total liabilities between Q3 2023 and Q4 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "685136e00c",
+  "template_idx": 2,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Percentage change in trade receivables between Q1 2024 and Q3 2024?",
+  "type": "GROWTH_RATE",
+  "seed_id": "1631c78635",
+  "template_idx": 2,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the capital expenditure margin (%) in Q2 2023?",
+  "type": "RATIO",
+  "seed_id": "3913a1917a",
+  "template_idx": 0,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the cash and cash equivalents margin (%) in Q2 2023?",
+  "type": "RATIO",
+  "seed_id": "5808b119d7",
+  "template_idx": 0,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the cost of sales margin (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "287eec4a83",
+  "template_idx": 0,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the dividends paid margin (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "47fbadbd1a",
+  "template_idx": 0,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the finance costs margin (%) in Q2 2024?",
+  "type": "RATIO",
+  "seed_id": "e3ac4ddfb3",
+  "template_idx": 0,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the gross profit margin (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "fe57719f1c",
+  "template_idx": 0,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the income tax margin (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "939adf16de",
+  "template_idx": 0,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the interest paid margin (%) in Q4 2023?",
+  "type": "RATIO",
+  "seed_id": "fdde1b17fe",
+  "template_idx": 0,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the inventory margin (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "ea11b9e983",
+  "template_idx": 0,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the net cash from operating activities margin (%) in Q4 2023?",
+  "type": "RATIO",
+  "seed_id": "11d5a897c1",
+  "template_idx": 0,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the net profit margin (%) in Q3 2023?",
+  "type": "RATIO",
+  "seed_id": "029b0bcb6f",
+  "template_idx": 0,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the operating expenses margin (%) in Q2 2024?",
+  "type": "RATIO",
+  "seed_id": "83deb211cb",
+  "template_idx": 0,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the operating profit margin (%) in Q3 2023?",
+  "type": "RATIO",
+  "seed_id": "0053683eca",
+  "template_idx": 0,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the revenue margin (%) in Q3 2023?",
+  "type": "RATIO",
+  "seed_id": "301c871d71",
+  "template_idx": 0,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the total assets margin (%) in Q2 2023?",
+  "type": "RATIO",
+  "seed_id": "e877e1e39e",
+  "template_idx": 0,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the total equity margin (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "7900ef483a",
+  "template_idx": 0,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the total liabilities margin (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "bbde5d6e69",
+  "template_idx": 0,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the trade receivables margin (%) in Q2 2023?",
+  "type": "RATIO",
+  "seed_id": "a5ad14a9d9",
+  "template_idx": 0,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of capital expenditure in total assets (%) in Q3 2024?",
+  "type": "RATIO",
+  "seed_id": "2aae818114",
+  "template_idx": 1,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of cash and cash equivalents in total assets (%) in Q3 2023?",
+  "type": "RATIO",
+  "seed_id": "04bb4decf1",
+  "template_idx": 1,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of cost of sales in total assets (%) in Q2 2023?",
+  "type": "RATIO",
+  "seed_id": "5440bdc42d",
+  "template_idx": 1,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of dividends paid in total assets (%) in Q2 2023?",
+  "type": "RATIO",
+  "seed_id": "d57e51e63e",
+  "template_idx": 1,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of finance costs in total assets (%) in Q1 2024?",
+  "type": "RATIO",
+  "seed_id": "db538198f5",
+  "template_idx": 1,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of gross profit in total assets (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "f16f91d4d8",
+  "template_idx": 1,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of income tax in total assets (%) in Q3 2023?",
+  "type": "RATIO",
+  "seed_id": "daaea44e0b",
+  "template_idx": 1,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of interest paid in total assets (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "15580def7b",
+  "template_idx": 1,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of inventory in total assets (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "5401f12a38",
+  "template_idx": 1,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of net cash from operating activities in total assets (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "1a841c930b",
+  "template_idx": 1,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of net profit in total assets (%) in Q4 2023?",
+  "type": "RATIO",
+  "seed_id": "272224fa44",
+  "template_idx": 1,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of operating expenses in total assets (%) in Q3 2023?",
+  "type": "RATIO",
+  "seed_id": "601b0b835f",
+  "template_idx": 1,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of operating profit in total assets (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "4d01557475",
+  "template_idx": 1,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of revenue in total assets (%) in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "191e9f8619",
+  "template_idx": 1,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of total assets in total assets (%) in Q2 2024?",
+  "type": "RATIO",
+  "seed_id": "b0e57d0c5f",
+  "template_idx": 1,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of total equity in total assets (%) in Q4 2023?",
+  "type": "RATIO",
+  "seed_id": "8ef8d5a684",
+  "template_idx": 1,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of total liabilities in total assets (%) in Q2 2023?",
+  "type": "RATIO",
+  "seed_id": "f7f4b80baa",
+  "template_idx": 1,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was the share of trade receivables in total assets (%) in Q1 2024?",
+  "type": "RATIO",
+  "seed_id": "b88e52ae7d",
+  "template_idx": 1,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of capital expenditure to revenue in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "e35e994e7f",
+  "template_idx": 2,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of cash and cash equivalents to revenue in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "4b224b0ac4",
+  "template_idx": 2,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of cost of sales to revenue in Q4 2023?",
+  "type": "RATIO",
+  "seed_id": "ff2e468e57",
+  "template_idx": 2,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of dividends paid to revenue in Q3 2023?",
+  "type": "RATIO",
+  "seed_id": "6c07d7a9b1",
+  "template_idx": 2,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of finance costs to revenue in Q2 2024?",
+  "type": "RATIO",
+  "seed_id": "261ae07fef",
+  "template_idx": 2,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of gross profit to revenue in Q3 2023?",
+  "type": "RATIO",
+  "seed_id": "8b1f8c0cd9",
+  "template_idx": 2,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of income tax to revenue in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "6dbdc59c9c",
+  "template_idx": 2,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of interest paid to revenue in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "4a154d5b3c",
+  "template_idx": 2,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of inventory to revenue in Q2 2023?",
+  "type": "RATIO",
+  "seed_id": "3bf8256486",
+  "template_idx": 2,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of net cash from operating activities to revenue in Q1 2024?",
+  "type": "RATIO",
+  "seed_id": "bcb368bec6",
+  "template_idx": 2,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of net profit to revenue in Q3 2023?",
+  "type": "RATIO",
+  "seed_id": "3e6b5097c6",
+  "template_idx": 2,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of operating expenses to revenue in Q1 2023?",
+  "type": "RATIO",
+  "seed_id": "d9e0d8a633",
+  "template_idx": 2,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of operating profit to revenue in Q3 2024?",
+  "type": "RATIO",
+  "seed_id": "716ee659ee",
+  "template_idx": 2,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of revenue to revenue in Q3 2024?",
+  "type": "RATIO",
+  "seed_id": "c4125a7955",
+  "template_idx": 2,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of total assets to revenue in Q1 2024?",
+  "type": "RATIO",
+  "seed_id": "487c47c406",
+  "template_idx": 2,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of total equity to revenue in Q2 2023?",
+  "type": "RATIO",
+  "seed_id": "673b6d3cd0",
+  "template_idx": 2,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of total liabilities to revenue in Q2 2023?",
+  "type": "RATIO",
+  "seed_id": "7f0195fc3e",
+  "template_idx": 2,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Ratio of trade receivables to revenue in Q2 2023?",
+  "type": "RATIO",
+  "seed_id": "e7406f7675",
+  "template_idx": 2,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was capital expenditure in Q4 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "4b27f707cb",
+  "template_idx": 0,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was cash and cash equivalents in Q2 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "ff04c9c3df",
+  "template_idx": 0,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was cost of sales in Q2 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "ab66a1a37c",
+  "template_idx": 0,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was dividends paid in Q3 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "e072e2fd2e",
+  "template_idx": 0,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was finance costs in Q4 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "ede396eb44",
+  "template_idx": 0,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was gross profit in Q2 2024?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "c904f687d0",
+  "template_idx": 0,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was income tax in Q1 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "4ce2be290e",
+  "template_idx": 0,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was interest paid in Q1 2024?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "4e7fa4670e",
+  "template_idx": 0,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was inventory in Q1 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "440247d7de",
+  "template_idx": 0,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was net cash from operating activities in Q4 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "b75de43f3d",
+  "template_idx": 0,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was net profit in Q2 2024?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "22118e60f7",
+  "template_idx": 0,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was operating expenses in Q2 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "f013da9aac",
+  "template_idx": 0,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was operating profit in Q1 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "6e0119d74a",
+  "template_idx": 0,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was revenue in Q1 2024?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "fd9536b08a",
+  "template_idx": 0,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total assets in Q1 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "c39c73f092",
+  "template_idx": 0,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total equity in Q2 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "10a186c54f",
+  "template_idx": 0,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was total liabilities in Q4 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "88a17fb066",
+  "template_idx": 0,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "What was trade receivables in Q3 2023?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "6e00ba9ebf",
+  "template_idx": 0,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of capital expenditure for Q4 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "e322911707",
+  "template_idx": 1,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of cash and cash equivalents for Q1 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "45eb433b88",
+  "template_idx": 1,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of cost of sales for Q1 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "9e0cf98d0e",
+  "template_idx": 1,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of dividends paid for Q1 2024.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "d2d70cf121",
+  "template_idx": 1,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of finance costs for Q2 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "972ee8b1b7",
+  "template_idx": 1,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of gross profit for Q1 2024.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "e68f033724",
+  "template_idx": 1,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of income tax for Q2 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "2de852d688",
+  "template_idx": 1,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of interest paid for Q2 2024.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "a00d7c3a90",
+  "template_idx": 1,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of inventory for Q2 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "f3c273fc47",
+  "template_idx": 1,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of net cash from operating activities for Q1 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "9e8fc654d5",
+  "template_idx": 1,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of net profit for Q2 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "11494b83a6",
+  "template_idx": 1,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of operating expenses for Q2 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "6835d608d4",
+  "template_idx": 1,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of operating profit for Q2 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "76765889b6",
+  "template_idx": 1,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of revenue for Q1 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "012c625c1c",
+  "template_idx": 1,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of total assets for Q3 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "aa42ca3adf",
+  "template_idx": 1,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of total equity for Q2 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "040f7e1c41",
+  "template_idx": 1,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of total liabilities for Q1 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "6bbbe0cbd2",
+  "template_idx": 1,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "Give the value of trade receivables for Q4 2023.",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "daca8ef035",
+  "template_idx": 1,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ },
+ {
+  "query": "capital expenditure in Q2 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "922be72344",
+  "template_idx": 2,
+  "metric": "capital expenditure",
+  "source": "combinatorial"
+ },
+ {
+  "query": "cash and cash equivalents in Q3 2024 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "0b6560a808",
+  "template_idx": 2,
+  "metric": "cash and cash equivalents",
+  "source": "combinatorial"
+ },
+ {
+  "query": "cost of sales in Q4 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "dcd2332f6b",
+  "template_idx": 2,
+  "metric": "cost of sales",
+  "source": "combinatorial"
+ },
+ {
+  "query": "dividends paid in Q2 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "b91c58a62c",
+  "template_idx": 2,
+  "metric": "dividends paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "finance costs in Q3 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "2cf6c3bdfa",
+  "template_idx": 2,
+  "metric": "finance costs",
+  "source": "combinatorial"
+ },
+ {
+  "query": "gross profit in Q3 2024 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "791a1f0169",
+  "template_idx": 2,
+  "metric": "gross profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "income tax in Q2 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "e248119732",
+  "template_idx": 2,
+  "metric": "income tax",
+  "source": "combinatorial"
+ },
+ {
+  "query": "interest paid in Q2 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "a9e4358d89",
+  "template_idx": 2,
+  "metric": "interest paid",
+  "source": "combinatorial"
+ },
+ {
+  "query": "inventory in Q1 2024 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "e9a603d920",
+  "template_idx": 2,
+  "metric": "inventory",
+  "source": "combinatorial"
+ },
+ {
+  "query": "net cash from operating activities in Q2 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "647c4c5374",
+  "template_idx": 2,
+  "metric": "net cash from operating activities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "net profit in Q1 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "bc82a7213d",
+  "template_idx": 2,
+  "metric": "net profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "operating expenses in Q2 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "0b6eb3f8d2",
+  "template_idx": 2,
+  "metric": "operating expenses",
+  "source": "combinatorial"
+ },
+ {
+  "query": "operating profit in Q2 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "92f099aba7",
+  "template_idx": 2,
+  "metric": "operating profit",
+  "source": "combinatorial"
+ },
+ {
+  "query": "revenue in Q2 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "bd6f3d4fc9",
+  "template_idx": 2,
+  "metric": "revenue",
+  "source": "combinatorial"
+ },
+ {
+  "query": "total assets in Q1 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "fe3a50103f",
+  "template_idx": 2,
+  "metric": "total assets",
+  "source": "combinatorial"
+ },
+ {
+  "query": "total equity in Q3 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "ddc9634c8e",
+  "template_idx": 2,
+  "metric": "total equity",
+  "source": "combinatorial"
+ },
+ {
+  "query": "total liabilities in Q1 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "6e0d2e2bee",
+  "template_idx": 2,
+  "metric": "total liabilities",
+  "source": "combinatorial"
+ },
+ {
+  "query": "trade receivables in Q4 2023 — how much?",
+  "type": "SCALAR_LOOKUP",
+  "seed_id": "3ea0b7e187",
+  "template_idx": 2,
+  "metric": "trade receivables",
+  "source": "combinatorial"
+ }
+]

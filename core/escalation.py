@@ -1,7 +1,10 @@
 """Rule-based escalation policy (variant 7a)."""
 from collections import Counter
 
-L0, L1, L2, L3 = "L0", "L1", "L2", "L3"
+# LB: another call to the model, but not a repair -- the same prompt with
+# more room, or a shortened schema. Kept apart from L1/L2 so that "solved
+# without an LLM repair" stays an honest figure.
+L0, LB, L1, L2, L3 = "L0", "LB", "L1", "L2", "L3"
 ACCEPT, ABSTAIN = "ACCEPT", "ABSTAIN"
 
 
@@ -12,6 +15,14 @@ def escalation_policy(confidence_score, threshold, exception_type, trace, i, max
     is between L1, L2 and ABSTAIN. With it None, the code ran cleanly and the
     decision follows the confidence score.
     """
+    # A value that clears the threshold is accepted even on the last allowed
+    # iteration. Testing the budget first threw away answers the cascade had
+    # already validated: measured over 70 cached FinQA runs, that happened 4
+    # times and 2 of those answers were correct.
+    if (exception_type is None and confidence_score is not None
+            and confidence_score >= threshold):
+        return ACCEPT
+
     if i >= max_iter:
         return ABSTAIN
 
